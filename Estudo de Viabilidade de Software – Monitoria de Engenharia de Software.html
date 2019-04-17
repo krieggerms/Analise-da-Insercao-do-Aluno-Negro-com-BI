@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" >
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="https://monitoriadeengenhariadesoftware.wordpress.com/xmlrpc.php" />
+	<title>Estudo de Viabilidade de Software &#8211; Monitoria de Engenharia de Software</title>
+<script type="text/javascript">
+  WebFontConfig = {"google":{"families":["Noto+Sans:r:latin,latin-ext","Lato:r,i,b,bi:latin,latin-ext"]}};
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://s0.wp.com/wp-content/plugins/custom-fonts/js/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+	})();
+</script><style id="jetpack-custom-fonts-css">.wf-active body{font-family:"Lato",sans-serif}.wf-active .main-navigation{font-family:"Lato",sans-serif}.wf-active .post-content cite{font-family:"Lato",sans-serif}.wf-active code, .wf-active kbd, .wf-active pre{font-family:"Lato",sans-serif}.wf-active .gallery-caption{font-family:"Lato",sans-serif}.wf-active .post-content fieldset legend, .wf-active .widget-content fieldset legend{font-family:"Lato",sans-serif}.wf-active .post-content label{font-family:"Lato",sans-serif}.wf-active .post-content input, .wf-active .post-content textarea, .wf-active .widget-content input, .wf-active .widget-content textarea{font-family:"Lato",sans-serif}.wf-active .post-content input[type="button"], .wf-active .post-content input[type="reset"], .wf-active .post-content input[type="submit"], .wf-active .widget-content input[type="button"], .wf-active .widget-content input[type="reset"], .wf-active .widget-content input[type="submit"]{font-family:"Lato",sans-serif}.wf-active .posts .format-link .post-content p{font-family:"Lato",sans-serif}.wf-active .posts .format-quote .post-content blockquote{font-family:"Lato",sans-serif}.wf-active .posts .format-quote .post-content cite{font-family:"Lato",sans-serif}.wf-active .posts .format-status .post-content p{font-family:"Lato",sans-serif}.wf-active .posts .format-status .post-content a.more-link{font-family:"Lato",sans-serif}.wf-active .single .format-status .post-content{font-family:"Lato",sans-serif}.wf-active .comments-title-container, .wf-active #content #menu_widget caption, .wf-active #infinite-footer .container{font-family:"Lato",sans-serif}.wf-active .comment-header cite{font-family:"Lato",sans-serif}.wf-active .comment-form input[type="email"], .wf-active .comment-form input[type="text"], .wf-active .comment-form input[type="url"], .wf-active .comment-form textarea, .wf-active div#respond textarea{font-family:"Lato",sans-serif}.wf-active .form-submit #submit{font-family:"Lato",sans-serif}.wf-active .footer .search-field, .wf-active .wrapper .search-field{font-family:"Lato",sans-serif}.wf-active #wp-calendar caption{font-family:"Lato",sans-serif}.wf-active #content #menu_widget .updated-at{font-family:"Lato",sans-serif}.wf-active .credits p{font-family:"Lato",sans-serif}@media (max-width: 1440px){.wf-active .main-navigation li > a, .wf-active .main-navigation li > a{font-family:"Lato",sans-serif}}.wf-active .site-title{font-family:"Noto Sans",sans-serif;font-style:normal;font-weight:400}.wf-active .site-description{font-weight:400;font-style:normal}.wf-active .header-search-block .search-field{font-family:"Noto Sans",sans-serif;font-weight:400;font-style:normal}.wf-active .post-header .post-title{font-family:"Noto Sans",sans-serif;font-weight:400;font-style:normal}.wf-active .post-header .post-title em{font-weight:400;font-style:normal}.wf-active .post-content h1, .wf-active .post-content h2, .wf-active .post-content h3, .wf-active .post-content h4, .wf-active .post-content h5, .wf-active .post-content h6{font-family:"Noto Sans",sans-serif;font-weight:400;font-style:normal}.wf-active .post-content h1 em, .wf-active .post-content h2 em, .wf-active .post-content h3 em{font-weight:400;font-style:normal}.wf-active .post-content h1{font-style:normal;font-weight:400}.wf-active .post-content h2{font-style:normal;font-weight:400}.wf-active .post-content h3{font-style:normal;font-weight:400}.wf-active .post-content h4{font-weight:400;font-style:normal}.wf-active .post-content h5{font-weight:400;font-style:normal}.wf-active .post-content h6{font-weight:400;font-style:normal}.wf-active .post-content blockquote{font-weight:400;font-weight:400;font-style:normal}.wf-active .posts .post-content h1{font-style:normal;font-weight:400}.wf-active .posts .post-content h2{font-style:normal;font-weight:400}.wf-active .posts .post-content h3{font-style:normal;font-weight:400}.wf-active .posts .post-content h4{font-style:normal;font-weight:400}.wf-active .posts .post-content h5{font-style:normal;font-weight:400}.wf-active .posts .post-content h6{font-style:normal;font-weight:400}.wf-active .posts .format-link .link-header h2 a{font-weight:400;font-style:normal}.wf-active .posts .format-quote .post-content blockquote > *{font-style:normal;font-weight:400}.wf-active .single .post-title{font-style:normal;font-weight:400}.wf-active .single .format-quote .post-content blockquote > *{font-style:normal;font-weight:400}.wf-active .post-author h4{font-family:"Noto Sans",sans-serif;font-weight:400;font-style:normal}.wf-active .comments-title{font-weight:400;font-style:normal}.wf-active .add-comment-title{font-weight:400;font-style:normal}.wf-active .comment-content h1, .wf-active .comment-content h2, .wf-active .comment-content h3, .wf-active .comment-content h4, .wf-active .comment-content h5, .wf-active .comment-content h6{font-family:"Noto Sans",sans-serif;font-weight:400;font-style:normal}.wf-active .pingbacks-title{font-family:"Noto Sans",sans-serif;font-style:normal;font-weight:400}.wf-active .comment-reply-title{font-family:"Noto Sans",sans-serif;font-weight:400;font-style:normal}.wf-active .author-info h4{font-family:"Noto Sans",sans-serif;font-weight:400;font-style:normal}.wf-active .author-info h5{font-family:"Noto Sans",sans-serif;font-style:normal;font-weight:400}.wf-active .page-title h5{font-family:"Noto Sans",sans-serif;font-weight:400;font-style:normal}.wf-active .page-title h3{font-family:"Noto Sans",sans-serif;font-weight:400;font-style:normal}.wf-active .widget-title{font-family:"Noto Sans",sans-serif;font-weight:400;font-style:normal}.wf-active .footer .widget-title{font-style:normal;font-weight:400}</style>
+<meta name="google-site-verification" content="F6X0ocJcSkuJZv50aZwJBT6iEqfvM_OQV_f5lBwJl4w" />
+<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.pubmine.com' />
+<link rel='dns-prefetch' href='//x.bidswitch.net' />
+<link rel='dns-prefetch' href='//static.criteo.net' />
+<link rel='dns-prefetch' href='//ib.adnxs.com' />
+<link rel='dns-prefetch' href='//aax.amazon-adsystem.com' />
+<link rel='dns-prefetch' href='//bidder.criteo.com' />
+<link rel='dns-prefetch' href='//cas.criteo.com' />
+<link rel='dns-prefetch' href='//gum.criteo.com' />
+<link rel='dns-prefetch' href='//ads.pubmatic.com' />
+<link rel='dns-prefetch' href='//gads.pubmatic.com' />
+<link rel='dns-prefetch' href='//tpc.googlesyndication.com' />
+<link rel='dns-prefetch' href='//ad.doubleclick.net' />
+<link rel='dns-prefetch' href='//googleads.g.doubleclick.net' />
+<link rel='dns-prefetch' href='//www.googletagservices.com' />
+<link rel='dns-prefetch' href='//cdn.switchadhub.com' />
+<link rel='dns-prefetch' href='//delivery.g.switchadhub.com' />
+<link rel='dns-prefetch' href='//delivery.swid.switchadhub.com' />
+<link rel="alternate" type="application/rss+xml" title="Feed para Monitoria de Engenharia de Software &raquo;" href="https://monitoriadeengenhariadesoftware.wordpress.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Monitoria de Engenharia de Software &raquo;" href="https://monitoriadeengenhariadesoftware.wordpress.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Monitoria de Engenharia de Software &raquo; Estudo de Viabilidade de&nbsp;Software" href="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1550249335h&ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJx9kN1uwzAIhV9oLtrURbmZ9iz+QSkN2JaxV+Xt5yRbp61TbhCg83EAuGXjU6wYK0gzmdtEUeGWfRKjQozLn+rkVZ/gf4xpRoUr1mz9bLbqQe44TT8+qQQbFCZOzvJdS9FzC31Ub0Ag3ahtoiu2LKB1YTwJxaNlfCrY+5JtXRWCgSwySpcdYZKHb2pNL/2Sw5v35ziXC6qaHoWamHrpRodcp9ZV9i9th/7q7ChBTJU6rffkYeZuBbk5cFZnLB/EjF8/6uJ3eXt+PQ/jOJ6Hl+snHnC6dw==?cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='baskerville-fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto+Slab%3A400%2C700%7CRoboto%3A400%2C400italic%2C700%2C700italic%2C300%7CPacifico%3A400&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s0.wp.com/_static/??-eJyNjNsOwiAQRH9I3FRrfTJ+C8UtYheWdEH078XLg8bE+jaTmXOgRGU4JAwJ0hE9CsTcQ69lxOnsiBCGOuuCwv6Z1assjcgC5nkXDEi6EqoSDfsvzGcVKVsXBIo7WEwCmOvKo0NFukBCH0mnqn5o/hEM2mBfDYrcWMNlnrTIitjo5Dh8FDWQdtMvdMKe2NZoob7e6h3a+12zWW27ddu03ekGyD+KKA==?cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css-3-1' href='https://s2.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1465851035h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-4-1' href='https://s1.wp.com/_static/??-eJx9i0EKAjEMRS9kDQUrsxHPkim1jaRJaTJ4fZmFiCiu/vvwHjxGyCpexKFvYfBWSQwwO6msON90zGYH+K0PNQ83RppgDSdJfe2/yjQTcmCt+nm+Im+lF4N2gsq6Iu/CtV9iSnGJyzml+xPFaUm5?cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript' src='https://s1.wp.com/_static/??-eJyFzkEKAjEMBdAL2ak6duFCPEutcUidpLVJHfT0dkAXwqAQ+Iv/4MdO2SCHsZ5BbGx3q1Ae7+iirOwvYAiH4hU6Qv7gkFiBdbY5iRKI+AEWWkonHMFUgdIAa5u5pAX3/RLyHWH6yyJo9uFqCgg+5/UjHTbOrbe7fd+7+AI4w1vP'></script>
+<link rel='stylesheet' id='all-css-0-2' href='https://s0.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1530132353h&cssminify=yes' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://monitoriadeengenhariadesoftware.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='SQL Joins' href='https://monitoriadeengenhariadesoftware.wordpress.com/2016/06/30/sql-joins/' />
+<link rel='next' title='Diagrama de Atividade' href='https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/10/diagrama-de-atividade/' />
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/" />
+<link rel='shortlink' href='https://wp.me/p6P7S2-2' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fmonitoriadeengenhariadesoftware.wordpress.com%2F2016%2F09%2F06%2Festudo-de-viabilidade-de-software%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fmonitoriadeengenhariadesoftware.wordpress.com%2F2016%2F09%2F06%2Festudo-de-viabilidade-de-software%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Estudo de Viabilidade de Software" />
+<meta property="og:url" content="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/" />
+<meta property="og:description" content="Estudo de viabilidade de software" />
+<meta property="article:published_time" content="2016-09-06T23:00:14+00:00" />
+<meta property="article:modified_time" content="2017-02-26T00:15:01+00:00" />
+<meta property="og:site_name" content="Monitoria de Engenharia de Software" />
+<meta property="og:image" content="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file9.png" />
+<meta property="og:image:width" content="486" />
+<meta property="og:image:height" content="675" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:text:title" content="Estudo de Viabilidade de&nbsp;Software" />
+<meta name="twitter:card" content="summary" />
+<meta property="fb:app_id" content="249643311490" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/08cf9bce74f1205e7a12be01e85d7eb6?s=32" sizes="16x16" />
+<link rel="icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/08cf9bce74f1205e7a12be01e85d7eb6?s=32" sizes="16x16" />
+<link rel="apple-touch-icon-precomposed" href="https://secure.gravatar.com/blavatar/08cf9bce74f1205e7a12be01e85d7eb6?s=114" />
+<link rel='openid.server' href='https://monitoriadeengenhariadesoftware.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://monitoriadeengenhariadesoftware.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://monitoriadeengenhariadesoftware.wordpress.com/osd.xml" title="Monitoria de Engenharia de Software" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+		<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="Monitoria de Engenharia de Software" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Auxílio e posts relacionados ao assunto de engenharia de software." /><meta name="msapplication-task" content="name=Assinar;action-uri=https://monitoriadeengenhariadesoftware.wordpress.com/feed/;icon-uri=https://secure.gravatar.com/blavatar/08cf9bce74f1205e7a12be01e85d7eb6?s=16" /><meta name="msapplication-task" content="name=Registre um blog gratuito;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Suporte do WordPress.com;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Fóruns;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="description" content="Estudo de viabilidade de software" />
+	<style type="text/css" id="baskerville-header-css">
+			.site-title,
+		.site-description {
+			clip: rect(1px 1px 1px 1px); /* IE7 */
+			clip: rect(1px, 1px, 1px, 1px);
+			position: absolute;
+		}
+		</style>
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/white-geometric-background-011.png"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
+</style>
+			<script type="text/javascript">
+		function __ATA_CC() {var v = document.cookie.match('(^|;) ?personalized-ads-consent=([^;]*)(;|$)');return v ? 1 : 0;}
+		var __ATA_PP = { pt: 1, ht: 0, tn: 'baskerville', amp: false, siteid: 8982, blogid: 100843002, consent: __ATA_CC() };
+		var __ATA = __ATA || {};
+		__ATA.cmd = __ATA.cmd || [];
+		__ATA.criteo = __ATA.criteo || {};
+		__ATA.criteo.cmd = __ATA.criteo.cmd || [];
+		</script>
+		<script type="text/javascript" src="//s.pubmine.com/head.js" async></script><link rel="amphtml" href="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script>
+</head>
+
+<body class="post-template-default single single-post postid-2 single-format-standard custom-background mp6 customizer-styles-applied has-featured-image has-site-logo highlander-enabled highlander-light">
+
+	<div class="header section small-padding bg-dark bg-image" style="background-image: url(https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/cropped-background5.jpg);">
+
+		<div class="cover"></div>
+
+		<a href="#search-container" class="screen-reader-text search-toggle">Busca</a>
+		<div class="header-search-block bg-graphite hidden" id="search-container">
+			<form role="search" method="get" class="search-form" action="https://monitoriadeengenhariadesoftware.wordpress.com/">
+				<label>
+					<span class="screen-reader-text">Pesquisar por:</span>
+					<input type="search" class="search-field" placeholder="Pesquisar &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Pesquisar" />
+			</form>		</div> <!-- /header-search-block -->
+
+		<div class="header-inner section-inner">
+
+			<a href="https://monitoriadeengenhariadesoftware.wordpress.com/" class="site-logo-link" rel="home"><img width="300" height="250" src="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/monitor21-e1444415403573.png?w=300&amp;h=250&amp;crop=1" class="site-logo attachment-baskerville-site-logo" alt="" data-size="baskerville-site-logo" srcset="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/monitor21-e1444415403573.png 300w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/monitor21-e1444415403573.png?w=150&amp;h=125&amp;crop=1 150w" sizes="(max-width: 300px) 100vw, 300px" data-attachment-id="16" data-permalink="https://monitoriadeengenhariadesoftware.wordpress.com/monitor2/" data-orig-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/monitor21-e1444415403573.png" data-orig-size="300,250" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="monitor2" data-image-description="" data-medium-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/monitor21-e1444415403573.png?w=300" data-large-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/monitor21-e1444415403573.png?w=300" /></a>
+			<h1 class="site-title">
+				<a href="https://monitoriadeengenhariadesoftware.wordpress.com/" title="Monitoria de Engenharia de Software" rel="home">
+					Monitoria de Engenharia de Software				</a>
+			</h1>
+			<h3 class="site-description">Auxílio e posts relacionados ao assunto de engenharia de software.</h3>
+
+		</div> <!-- /header-inner -->
+	</div> <!-- /header -->
+
+	<div class="navigation section no-padding bg-dark">
+		<div class="navigation-inner section-inner clear">
+			<button class="nav-toggle fleft">Menu</button>
+			<a class="screen-reader-text skip-link" href="#content">Pular para o conteúdo</a>
+
+			<div class="main-navigation">
+				<ul id="menu-menu-1" class="menu"><li id="menu-item-948" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-948"><a href="https://monitoriadeengenhariadesoftware.wordpress.com/">Home</a></li>
+<li id="menu-item-950" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-950"><a href="https://monitoriadeengenhariadesoftware.wordpress.com/category/notacao/">Diagramas da UML</a></li>
+<li id="menu-item-949" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-949"><a href="https://monitoriadeengenhariadesoftware.wordpress.com/about/">About</a></li>
+</ul>			</div>
+
+			<a class="search-toggle search-icon fright" href="#">Abrir pesquisa</a>
+		</div> <!-- /navigation-inner -->
+	</div> <!-- /navigation -->
+
+<div class="wrapper section medium-padding">
+	<div class="section-inner clear">
+
+				<div class="content clear center" id="content">
+
+			
+
+	<div id="post-2" class="post-2 post type-post status-publish format-standard has-post-thumbnail hentry category-templates tag-engenharia-de-software tag-estudo-de-viabilidade tag-estudo-de-viabilidade-de-software tag-feasibility-study tag-pieces tag-rup tag-software tag-viabilidade-economica tag-viabilidade-operacional tag-viabilidade-organizacional tag-viabilidade-tecnica clear">
+
+		<div class="post-header"><h2 class="post-title entry-title"><a href="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/" rel="bookmark">Estudo de Viabilidade de&nbsp;Software</a></h2></div>			<div class="featured-media">
+				<img width="190" height="265" src="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file4-e1458509978556.png?w=190" class="attachment-baskerville-post-image size-baskerville-post-image wp-post-image" alt="" srcset="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file4-e1458509978556.png 190w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file4-e1458509978556.png?w=108 108w" sizes="(max-width: 190px) 100vw, 190px" data-attachment-id="41" data-permalink="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/file4/" data-orig-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file4-e1458509978556.png" data-orig-size="190,265" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="file4" data-image-description="" data-medium-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file4-e1458509978556.png?w=190" data-large-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file4-e1458509978556.png?w=190" />			</div> <!-- /featured-media -->
+		
+			<div class="post-content clear">
+				<p style="text-align:justify;"><span id="more-2"></span></p>
+<p style="text-align:justify;">    O objetivo de um estudo de viabilidade, como o próprio nome já diz, é avaliar sob o ponto de vista operacional, técnico, econômico e organizacional se o projeto é viável.</p>
+<p style="text-align:justify;">    O documento destina-se ao <em>stakeholder</em> do sistema (alguém que tenha alguma influência direta ou indireta sobre os requisitos do sistema). (SOMMERVILLE,2011, p. 70).</p>
+<p style="text-align:justify;">    O estudo de viabilidade acontece após a especificação de requisitos de negócio, ou seja, é o segundo passo do processo de engenharia de requisitos.</p>
+<p style="text-align:justify;">    Justifica-se a sua realização a fim de analisar e responder algumas questões do ponto de vista da viabilidade operacional, técnica, de cronograma e econômica, como:<span style="color:#ffffff;">a</span></p>
+<p><strong><img data-attachment-id="181" data-permalink="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/perg/" data-orig-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/perg3.png?w=736" data-orig-size="2211,1479" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="perg" data-image-description="" data-medium-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/perg3.png?w=736?w=300" data-large-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/perg3.png?w=736?w=736" class="alignnone size-full wp-image-181" src="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/perg3.png?w=736" alt="perg.png" srcset="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/perg3.png?w=736 736w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/perg3.png?w=1472 1472w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/perg3.png?w=150 150w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/perg3.png?w=300 300w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/perg3.png?w=768 768w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/perg3.png?w=1024 1024w" sizes="(max-width: 736px) 100vw, 736px"   /><br />
+</strong></p>
+<hr />
+<p style="text-align:justify;"><strong>Tipos de viabilidade a ser analisadas:</strong></p>
+<ul>
+<li style="text-align:justify;"><span style="text-decoration:underline;">Viabilidade organizacional</span>: está relacionada a quanto a solução beneficia a organização. Verifica-se se haverá aderência ao uso da solução por parte dos usuários devido a cultura organizacional e a percepção dos envolvidos; se a solução está alinhada com os objetivos estratégicos da organização; se há compreensão e suporte da alta direção da organização em relação ao projeto, etc.</li>
+<li style="text-align:justify;"><span style="text-decoration:underline;">Viabilidade operacional</span>: está relacionada a quanto a solução se adéqua a organização; quais são os requisitos da solução; o que o cliente espera que o sistema faça;</li>
+<li style="text-align:justify;"><span style="text-decoration:underline;">Viabilidade econômica</span>: análise entre o custo de desenvolvimento e os benefícios após implementação do projeto (custo-benefício).</li>
+<li style="text-align:justify;"><span style="text-decoration:underline;">Viabilidade técnica</span>: atrelada ao suporte técnico que a organização oferecerá para o desenvolvimento do projeto; restrições da equipe ou da tecnologia; necessidade de se investir em pesquisas antes de realizar o projeto; etc.</li>
+<li style="text-align:justify;"><span style="text-decoration:underline;">Viabilidade de cronograma</span>: cruzamento entre as atividades levantadas e o tempo estimado para realizá-las; definição de marcos do projeto; impacto de atrasos.</li>
+<li style="text-align:justify;">Outros: viabilidade legal, cultural, marketing, etc.</li>
+</ul>
+<hr />
+<p style="text-align:justify;">     Uma dicas que se encontra na hora de analisar a viabilidade operacional é utilizar um framework para categorizar problemas (checklist) e auxiliar no levantamento de requisitos, chamado PIECES. Esta metodologia foi criada em 1994 pelo James Wetherbe e serve para analisar sistemas a fim de resolver problemas, explorar as oportunidades e satisfazer os objetivos estabelecidos; garante também que tanto analistas quanto usuários &#8220;conversem a mesma língua&#8221; ao contribuir na definição dos requisitos do projeto. O nome PIECES surge da sigla em inglês, onde cada letra categoriza um problema: Performance, Information, Economics, Control, Efficiency e Security.</p>
+<p style="text-align:justify;"><span style="text-decoration:underline;">Performance</span>: o sistema ou operação atual oferece vazão e tempo de respostas adequados? Também está relacionada a quantidade máxima de processamento que o sistema pode realizar.</p>
+<p style="text-align:justify;"><span style="text-decoration:underline;">Informação</span>: a operação atual oferece aos stakeholders informações corretas, úteis e com tempo adequado? As informações estão organizadas e são facilmente encontradas?</p>
+<p style="text-align:justify;"><span style="text-decoration:underline;">Economia</span>: a operação atual oferece serviços de informação como custo/eficiência adequados para a organização? Pode haver redução de custos? Como aumentar o lucro?</p>
+<p style="text-align:justify;"><span style="text-decoration:underline;">Controle</span>: envolve segurança. Como gerenciar segurança das informações para evitar fraudes ou potenciais violações de privacidade, porém sem burocratizar ou criar controles que atrasam a operação.</p>
+<p style="text-align:justify;"><span style="text-decoration:underline;">Eficiência</span>: analisar as atividades que desperdiçam tempo, principalmente causadas por redundância. Como se está utilizando os recursos?</p>
+<p style="text-align:justify;"><span style="text-decoration:underline;">Serviços</span>: qual a acurácia do sistema? Oferece serviços confiáveis?</p>
+<hr />
+<p class="font_8"><img data-attachment-id="1096" data-permalink="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/imagem_estudo_de_viabilidade/" data-orig-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2016/09/imagem_estudo_de_viabilidade1.png?w=736" data-orig-size="3660,4131" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="imagem_estudo_de_viabilidade" data-image-description="" data-medium-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2016/09/imagem_estudo_de_viabilidade1.png?w=736?w=266" data-large-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2016/09/imagem_estudo_de_viabilidade1.png?w=736?w=736" class="alignnone size-full wp-image-1096" src="https://monitoriadeengenhariadesoftware.files.wordpress.com/2016/09/imagem_estudo_de_viabilidade1.png?w=736" alt="imagem_estudo_de_viabilidade.png" srcset="https://monitoriadeengenhariadesoftware.files.wordpress.com/2016/09/imagem_estudo_de_viabilidade1.png?w=736 736w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2016/09/imagem_estudo_de_viabilidade1.png?w=1472 1472w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2016/09/imagem_estudo_de_viabilidade1.png?w=133 133w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2016/09/imagem_estudo_de_viabilidade1.png?w=266 266w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2016/09/imagem_estudo_de_viabilidade1.png?w=768 768w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2016/09/imagem_estudo_de_viabilidade1.png?w=907 907w" sizes="(max-width: 736px) 100vw, 736px"   /><br />
+No tópico 1, atenha-se a responder questões do <span style="text-decoration:underline;">documento</span> e não do projeto!<span style="color:#ffffff;">a</span></p>
+<p class="font_8"><strong>1</strong><strong>. Introdução<a href="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file61.png"><img data-attachment-id="79" data-permalink="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/file6-2/" data-orig-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file61.png" data-orig-size="958,1347" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="file6" data-image-description="" data-medium-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file61.png?w=213&#038;h=300" data-large-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file61.png?w=728" class="alignright wp-image-79 size-medium" style="border:1px solid #ffffff;" src="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file61.png?w=213&#038;h=300" alt="file6" width="213" height="300" srcset="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file61.png?w=213&amp;h=300 213w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file61.png?w=426&amp;h=600 426w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file61.png?w=107&amp;h=150 107w" sizes="(max-width: 213px) 100vw, 213px" /></a><br />
+</strong></p>
+<p class="font_9"><strong>    1.1 Finalidade</strong></p>
+<p class="font_9">    Nesta seção deve-se citar a finalidade do documento de Estudo de Viabilidade. Citar também <span style="text-decoration:underline;">quem</span> irá utilizá-lo e <span style="text-decoration:underline;">como</span>.</p>
+<p class="font_8" style="text-align:justify;">Possíveis pessoas que poderão utilizar o documento:</p>
+<p class="font_8" style="padding-left:30px;text-align:justify;">&#8211; Clientes, argumentar ou confirmar sobre os requisitos definidos;</p>
+<p class="font_8" style="padding-left:30px;text-align:justify;">&#8211; Gestores, gerir o processo mais adequado para o desenvolvimento, a equipe, cronograma e custos;</p>
+<p class="font_8" style="padding-left:30px;text-align:justify;">&#8211; Engenheiros, analisar o sistema a desenvolver;</p>
+<p class="font_8" style="padding-left:30px;text-align:justify;">&#8211; Analistas de Testes, desenvolver e executar planos de teste do sistema;</p>
+<p class="font_8" style="text-align:justify;"><span style="color:#808080;">Ex.: “O objetivo de um estudo de viabilidade, é avaliar de um ponto de vista técnico, econômico e organizacional se o projeto é viável. O estudo de viabilidade destina-se ao cliente, e aos desenvolvedores de software. Justifica-se este documento servir as pessoas citadas anteriormente, pelo fato do estudo de viabilidade se dar através da interação entre as partes interessadas, com a finalidade de saber se o sistema irá contribuir para os objetivos da organização, considerando certas restrições, analisar se o sistema poderá ser implementado e também saber caso haja a necessidade de integração entre outros sistemas, se a integração será possível. Espera-se que o documento seja utilizado para consulta referente a confirmação ou não da viabilidade do projeto. Caso se determine viável, o próximo passo é a elicitação dos requisitos de usuário.”</span></p>
+<p class="font_8" style="text-align:justify;"><span style="color:#ffffff;">a</span></p>
+<p class="font_8"><strong>    1.2 Definições, Acrônimos e Abreviações</strong></p>
+<p class="font_8" style="text-align:justify;">    Esta seção deve conter breve explicação sobre possíveis definições, acrônimos e abreviações que aparecerão e estarão ligadas ao negócio e naturalmente ao documento de Estudo de Viabilidade, possibilitando quem os leia, que interprete-os corretamente. Caso não possua, explicitar que não se aplica. Deverá ser descrita na ordem alfabética.</p>
+<p class="font_8"><span style="color:#ff0000;"> <span style="color:#808080;">Ex.:</span></span></p>
+<p class="font_8" style="padding-left:60px;"><span style="color:#808080;">ANVISA    Agência Nacional de Vigilância Sanitária</span></p>
+<p class="font_8" style="padding-left:60px;"><span style="color:#808080;">ATM         Automated Teller Machine</span></p>
+<p class="font_8" style="padding-left:60px;"><span style="color:#808080;">CEP           Código de Endereçamento Postal</span></p>
+<p class="font_8" style="padding-left:60px;"><span style="color:#808080;">FUNAI      Fundação Nacional do Índio</span></p>
+<p class="font_8" style="padding-left:60px;"><span style="color:#808080;">NASDAQ   National Association of Securities Dealers Automated  Quotations</span></p>
+<p class="font_8" style="padding-left:60px;"><span style="color:#808080;">PR             Paraná</span></p>
+<p class="font_8" style="padding-left:60px;"><span style="color:#ffffff;">_</span></p>
+<p class="font_8"><strong>    1.3 Visão Geral</strong></p>
+<p class="font_8" style="text-align:justify;">    Explicar nesta seção o que o restante do documento de Estudo de Viabilidade contém. Similar ao final da seção de Introdução de um artigo científico!!!</p>
+<p class="font_8" style="text-align:justify;"><span style="color:#808080;">Ex.: Neste estudo de viabilidade serão descritos o objetivo do projeto de um Software X. Aspectos que serão executados e também os que não serão cobertos encontra-se na seção do Escopo. O projeto baseia-se na situação de um problema existente, o qual encontra-se descrito como o diagnóstico atual do cliente. No documento também serão descritos os requisitos funcionais e não funcionais do sistema. Pesquisou-se outros softwares que atendam o mesmo domínio e ele estão descritos na seção de Alternativas Propostas. Após a análise entre as vantagens e desvantagens das soluções propostas, seus custos e riscos, chegou-se à conclusão de qual alternativa é mais adequada, descrito na seção Alternativa Recomendada. O prazo do projeto encontra-se descrito na seção de Cronograma, onde considerou-se as atividades para o desenvolvimento e os recursos disponíveis. A conclusão e responsáveis do projeto encontram-se no final do documento respectivamente.</span></p>
+<p class="font_8" style="text-align:justify;"><span style="color:#ffffff;">_</span></p>
+<p class="font_8"><strong>  2. Objetivo</strong></p>
+<p class="font_8" style="text-align:justify;">    Descrever de forma clara e sucinta o objetivo do projeto. Característica de escrita voltada a nível executivo. Utilizar frases no infinitivo.</p>
+<p class="font_8" style="text-align:justify;"><span style="color:#808080;">Ex.: O propósito do projeto é desenvolver um sistema que forneça para o cliente x a possibilidade de administrar a sua instituição de forma automatizada, baseado em seu perfil e realidade. O projeto seguirá a metodologia x, contará com uma equipe de x desenvolvedores, estimando-se x dias para a conclusão do desenvolvimento.</span></p>
+<p class="font_8" style="text-align:justify;"><span style="color:#ffffff;">_</span></p>
+<p class="font_8"><strong>  3. Escopo</strong></p>
+<p class="font_8">    Descrever o escopo do projeto, ressaltando os aspectos que serão, e os que não serão cobertos. Delimitar a fronteira de atuação. Para os aspectos não cobertos: justificar o por que não serão atendidos. As informações declaradas aqui, podem ser mais de alto nível.</p>
+<p class="font_8" style="text-align:justify;"><span style="color:#808080;">Ex.: O escopo do projeto cobre o design do software, ou seja, a transformação da análise de requisitos em um documento ou conjunto de documentos capazes de serem interpretados pelos programadores, através da modelagem de negócio, elicitação de requisitos, elaboração de diagramas, e prototipação. Por indisponibilidade de tempo, o escopo do projeto não cobre a implementação do sistema, ou seja, a codificação. Consequentemente não havendo a codificação, o projeto também não contemplará os últimos estágios do desenvolvimento que seriam o teste, a homologação e a efetiva implantação do software.</span></p>
+<p class="font_8"><span style="color:#ffffff;">_</span></p>
+<p class="font_8"><strong>  4. Diagnóstico Atual</strong></p>
+<p class="font_8" style="text-align:justify;">    Descrever a situação atual do cliente. Informar se no ambiente atual já existe algum produto de software em execução que será substituído ou integrado a nova solução. Neste caso, descrever o software, sua versão, fornecedor, uma breve descrição de suas características e como ele é utilizado. Salientar o ambiente atual e as dificuldades desse ambiente.</p>
+<p class="font_8" style="text-align:justify;">    Caso ele não possua algum software, indicar como ele controla seu negócio de forma manual. Anexar documentos como recibos, contratos, planilhas, relatórios e até tirar fotos se possível.</p>
+<p class="font_8" style="text-align:justify;"><span style="color:#808080;">Ex.: Atualmente o cliente não utiliza nenhum software em seu negócio. O levantamento de requisitos e o design do sistema se basearão em formulários existentes onde atualmente são preenchidos manualmente. Exemplos utilizados são, recibo de papel, relatório impresso a partir de uma intranet da filial, contrato pré-digitado com campos em branco para edição, fichas de cadastro, quadro de horário de funcionários e etc. A partir de análises, haverá modificações em relação a situação atual, como a eliminação de campos requeridos pelos formulários, onde não trazem nenhuma utilidade e/ou funcionalidade ao administrador. No mercado atual, já existem softwares para a área, porém não há um que atenda as particularidades deste negócio em si, por no dia-a-dia, possuir sua própria cultura e métodos.</span></p>
+<p class="font_8" style="text-align:justify;"><span style="color:#ffffff;">_</span></p>
+<p class="font_8"><strong>  5. Requisitos</strong></p>
+<p class="font_8"><span style="color:#ffffff;">_</span><br />
+<a href="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file71.png"><img data-attachment-id="83" data-permalink="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/file7-2/" data-orig-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file71.png" data-orig-size="897,1100" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="file7" data-image-description="" data-medium-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file71.png?w=204&#038;h=250" data-large-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file71.png?w=736" class="alignleft wp-image-83 " style="border:1px solid #ffffff;" src="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file71.png?w=204&#038;h=250" alt="file7" width="204" height="250" srcset="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file71.png?w=204&amp;h=250 204w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file71.png?w=408&amp;h=500 408w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file71.png?w=122&amp;h=150 122w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file71.png?w=245&amp;h=300 245w" sizes="(max-width: 204px) 100vw, 204px" /></a>     Um dos itens mais importantes do documento de estudo de viabilidade, será tratado num post específicos sobre Requisitos!</p>
+<p class="font_8"><span style="color:#ffffff;">_</span></p>
+<p class="font_8"><strong>  6. Alternativas Propostas</strong></p>
+<p class="font_8" style="text-align:justify;">    Listar todas as alternativas propostas para a solução do problema, incluindo a que você está propondo. Pesquisar soluções similares que já existem no mercado, ou pesquisas acadêmicas na área, etc. Considerar o tempo de análise da ferramenta proposta, tempo de implementação e treinamento;</p>
+<p class="font_8">Sugiro coletarem para cada alternativa, as seguintes informações:</p>
+<p class="font_8">      6.1 Alternativa 1</p>
+<p class="font_8">            O que é?</p>
+<p class="font_8">            O que faz?</p>
+<p class="font_8">            Vantagens?</p>
+<p class="font_8">            Desvantagens?</p>
+<p class="font_8">            Custo?</p>
+<p class="font_8">            Tempo para análise e implementação?</p>
+<p class="font_8">      6.2 Alternativa 2</p>
+<p class="font_8">      &#8230;</p>
+<p class="font_8">      6.n Alternativa n</p>
+<p class="font_8">      &#8230;</p>
+<p class="font_8"><span style="color:#ffffff;">_</span></p>
+<p class="font_8"><strong>  7. Alternativa Recomendada</strong></p>
+<p class="font_8" style="text-align:justify;">    Dentre as alternativas apontadas no item anterior, citar a recomendada pelos autores do projeto, descrevendo os motivos. Detalhar nas subseções benefícios da alternativa escolhida, seus custos para a implantação e os riscos envolvidos durante o desenvolvimento.</p>
+<p class="font_8" style="text-align:justify;"><span style="color:#ffffff;">_</span></p>
+<p class="font_8"><strong>      7.1 Benefícios</strong></p>
+<p class="font_8" style="text-align:justify;">    Citar os benefícios que se espera alcançar através da implantação do sistema. Benefícios tangíveis e intangíveis.</p>
+<p class="font_8" style="text-align:justify;"><span style="color:#808080;">Ex.: Redução de custos, redução de erros, economia de tempo, melhoria de aspectos de gerenciamento e controle, etc.</span></p>
+<p class="font_8" style="text-align:justify;"><span style="color:#ffffff;">_</span></p>
+<p class="font_8">  <strong><br />
+<a href="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file81.png"><img data-attachment-id="96" data-permalink="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/file8-2/" data-orig-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file81.png" data-orig-size="304,361" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="file8" data-image-description="" data-medium-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file81.png?w=239&#038;h=283" data-large-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file81.png?w=304" class="alignleft wp-image-96" style="border:1px solid #ffffff;" src="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file81.png?w=239&#038;h=283" alt="file8" width="239" height="283" srcset="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file81.png?w=239&amp;h=283 239w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file81.png?w=126&amp;h=150 126w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file81.png?w=253&amp;h=300 253w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file81.png 304w" sizes="(max-width: 239px) 100vw, 239px" /></a>7.2 Custos<br />
+</strong></p>
+<p class="font_8" style="text-align:justify;">    Relacionar os custos para a implantação da alternativa, com o maior grau de precisão possível. Citar a fonte de onde os custos foram consultados.</p>
+<p class="font_8" style="text-align:justify;">    Existem técnicas para estimar custos de projeto de software. A seguir uma imagem do Guia PMBOK® ilustrando de forma geral o fluxo de estimar os custos de um projeto:</p>
+<p class="font_8"><img data-attachment-id="185" data-permalink="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/custos/" data-orig-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/custos.png?w=711&#038;h=249" data-orig-size="2200,770" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="custos" data-image-description="" data-medium-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/custos.png?w=711&#038;h=249?w=300" data-large-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/custos.png?w=711&#038;h=249?w=736" class="alignnone  wp-image-185" src="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/custos.png?w=711&#038;h=249" alt="custos.png" width="711" height="249" srcset="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/custos.png?w=711&amp;h=249 711w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/custos.png?w=1422&amp;h=498 1422w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/custos.png?w=150&amp;h=53 150w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/custos.png?w=300&amp;h=105 300w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/custos.png?w=768&amp;h=269 768w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/custos.png?w=1024&amp;h=358 1024w" sizes="(max-width: 711px) 100vw, 711px" /></p>
+<p class="font_8" style="text-align:justify;">Porém aqui abordarei de uma forma mais didática e resumida, focando em aspectos superficiais, e citar o que minimamente deve constar no documento:</p>
+<p class="font_8" style="text-align:justify;"><strong>Viabilidade Econômica</strong></p>
+<p class="font_8">            <span style="text-decoration:underline;"><span style="color:#808080;text-decoration:underline;">Custo de desenvolvimento (Ocorre somente uma vez)</span></span></p>
+<p class="font_8">                       <span style="text-decoration:underline;"><span style="color:#808080;text-decoration:underline;">Custo de desenvolvimento e aquisição</span></span></p>
+<p class="font_8">                                   Quem desenvolverá o sistema? Nossa equipe, ou iremos contratar?</p>
+<p class="font_8">                                   Qual hardware alugar/comprar?</p>
+<p class="font_8">                                   Custo de compra de novos equipamentos.</p>
+<p class="font_8">                                   Custo de treinamentos;</p>
+<p class="font_8">                      <span style="color:#808080;"> </span><span style="text-decoration:underline;"><span style="color:#808080;text-decoration:underline;">Custo de instalação e de conversão</span></span></p>
+<p class="font_8">                                   Aquisição de softwares para o período de desenvolvimento (sistema operacional, ferramentas de modelagem, etc.);</p>
+<p class="font_8">                                   Necessitará treinamento para equipe?</p>
+<p class="font_8">                                   Quanto custa os softwares utilizados para desenvolvimento?</p>
+<p class="font_8">                                   Custo das ferramentas de modelagem?</p>
+<p class="font_8">                                   Custo da ferramenta para fazer carga de dados do sistema legado.</p>
+<p class="font_8">            <strong>Custos Operacionais (Custos contínuos)</strong></p>
+<p class="font_8">                           <span style="text-decoration:underline;color:#808080;">Custos Fixos</span></p>
+<p class="font_8">                                   <span style="text-decoration:underline;color:#808080;">Pessoal</span></p>
+<p class="font_8">                                                Salário dos desenvolvedores do Sistema (programadores, analista de sistemas, gerente de projeto, etc.);</p>
+<p class="font_8">                           Salário do pessoal do suporte;</p>
+<p class="font_8">                           <span style="text-decoration:underline;color:#808080;">Manutenção</span></p>
+<p class="font_8">                                              <span class="color_2"> Pagamento de aluguel;</span></p>
+<p class="font_8">                                               Pagamento de energia;</p>
+<p class="font_8">                                               Pagamento de água;</p>
+<p class="font_8">                                               Pagamento internet;</p>
+<p class="font_8">                                               Pagamento telefone;</p>
+<p class="font_8">                                               Pagamento material de escritório;</p>
+<p class="font_8">                            <span style="text-decoration:underline;color:#808080;">Custos Variáveis</span></p>
+<p class="font_8">                                   <span style="text-decoration:underline;color:#808080;">Pessoal</span></p>
+<p class="font_8">                                               Treinamento;</p>
+<p class="font_8">                                               Workshop;</p>
+<p class="font_8">                                               Consultoria especialista;</p>
+<p class="font_8">                                   <span style="text-decoration:underline;"><span style="color:#808080;text-decoration:underline;">Manutenção</span></span></p>
+<p class="font_8">                                               Manutenção de Hardware/Software;</p>
+<p class="font_8">                                               Custo de licença dos softwares utilizados;</p>
+<p class="font_8" style="text-align:justify;"><span style="color:#ff0000;"><span style="color:#808080;">     As estimativas de custos devem ser refinadas e atualizadas durante o curso do projeto. A seguir, mais sugestões de itens que podem constar em um estudo de viabilidade econômica:</span></span></p>
+<p class="font_8" style="text-align:justify;"><img data-attachment-id="174" data-permalink="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/viab_econ/" data-orig-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/viab_econ.png?w=736" data-orig-size="2458,1355" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="viab_econ" data-image-description="" data-medium-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/viab_econ.png?w=736?w=300" data-large-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/viab_econ.png?w=736?w=736" class="alignnone size-full wp-image-174" src="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/viab_econ.png?w=736" alt="viab_econ" srcset="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/viab_econ.png?w=736 736w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/viab_econ.png?w=1472 1472w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/viab_econ.png?w=150 150w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/viab_econ.png?w=300 300w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/viab_econ.png?w=768 768w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/viab_econ.png?w=1024 1024w" sizes="(max-width: 736px) 100vw, 736px"   /></p>
+<p class="font_8"><span style="color:#ffffff;">_</span></p>
+<p class="font_8"><strong>  7.3 Riscos</strong></p>
+<p class="font_8" style="text-align:justify;">    Identificar possíveis riscos associados à alternativa. Também identificar ações de prevenção e contingência. A seguir, uma tabela contendo os principais itens a serem colocados nesta seção.</p>
+<p class="font_8"><a href="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/186ce0_0228f2760c824452b2540534d890037f.png"><img data-attachment-id="24" data-permalink="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/186ce0_0228f2760c824452b2540534d890037f/" data-orig-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/186ce0_0228f2760c824452b2540534d890037f.png" data-orig-size="770,162" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="186ce0_0228f2760c824452b2540534d890037f" data-image-description="" data-medium-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/186ce0_0228f2760c824452b2540534d890037f.png?w=733&#038;h=154" data-large-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/186ce0_0228f2760c824452b2540534d890037f.png?w=736" class="wp-image-24 aligncenter" src="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/186ce0_0228f2760c824452b2540534d890037f.png?w=733&#038;h=154" alt="186ce0_0228f2760c824452b2540534d890037f" width="733" height="154" srcset="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/186ce0_0228f2760c824452b2540534d890037f.png?w=733&amp;h=154 733w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/186ce0_0228f2760c824452b2540534d890037f.png?w=150&amp;h=32 150w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/186ce0_0228f2760c824452b2540534d890037f.png?w=300&amp;h=63 300w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/186ce0_0228f2760c824452b2540534d890037f.png?w=768&amp;h=162 768w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/186ce0_0228f2760c824452b2540534d890037f.png 770w" sizes="(max-width: 733px) 100vw, 733px" /></a></p>
+<p class="font_8"><span style="color:#808080;">Considerar os diferentes tipos de riscos envolvendo:</span></p>
+<ul class="font_8">
+<li>
+<p class="font_8">Tecnologia;</p>
+</li>
+<li>
+<p class="font_8">Pessoas;</p>
+</li>
+<li>
+<p class="font_8">Organização;</p>
+</li>
+<li>
+<p class="font_8">Ferramentas;</p>
+</li>
+<li>
+<p class="font_8">Requisitos;</p>
+</li>
+<li>
+<p class="font_8">Estimativa;</p>
+</li>
+</ul>
+<p class="font_8"><span style="color:#808080;">Exemplo de tipos de riscos:</span></p>
+<ul class="font_8">
+<li>
+<p class="font_8">Inaptidão dos recursos alocados no projeto;</p>
+</li>
+<li>
+<p class="font_8">Ausência de recursos importantes no projeto;</p>
+</li>
+<li>
+<p class="font_8">Mudanças de requisitos que impactem diretamente nos marcos do projeto;</p>
+</li>
+<li>
+<p class="font_8">Mudanças que requerem retrabalho;</p>
+</li>
+<li>
+<p class="font_8">Tamanho do software é subestimado;</p>
+</li>
+<li>
+<p class="font_8">O cliente não sabe o que quer;</p>
+</li>
+<li>
+<p class="font_8">Reestruturação da organização durante a execução do projeto;</p>
+</li>
+<li>
+<p class="font_8">O cliente ficar indisponível;</p>
+</li>
+<li>
+<p class="font_8">Rotatividade de pessoal;</p>
+</li>
+<li>
+<p class="font_8">Atrasos de especificações;</p>
+</li>
+<li>
+<p class="font_8">Não prever necessidades do projeto;</p>
+</li>
+<li>
+<p class="font_8">Projetos paralelos que interfiram no desenvolvimento do projeto;</p>
+</li>
+<li>
+<p class="font_8">Participação dos integrantes da equipe de desenvolvimento não definidas;</p>
+</li>
+<li>
+<p class="font_8">O tempo necessário para desenvolver o software é subestimado. [PRAZO]</p>
+</li>
+</ul>
+<p><span style="color:#ffffff;">_</span></p>
+<p class="font_8"><strong>  8. Cronograma</strong></p>
+<p class="font_8">    Apresentação das atividades preliminares, com datas e recursos envolvidos. Basear-se nas etapas do desenvolvimento.</p>
+<p class="font_8" style="text-align:center;">Concepção -&gt; Elaboração -&gt; Construção -&gt; Transição</p>
+<p class="font_8"><span class="color_2">Exemplo de atividades: Modelagem de Negócios, Requisitos, Análise e Projeto, Implementação, Teste e Implantação.</span></p>
+<p class="font_8"><span style="color:#ffffff;">_____</span>Estimar considerando a quantidade de material, pessoas, equipamentos que serão necessários para desenvolver a atividade.</p>
+<p class="font_8">Opções de apresentação:</p>
+<ul class="font_8">
+<li>
+<p class="font_8">Lista de atividades;</p>
+</li>
+<li>
+<p class="font_8">Diagrama de Rede do Cronograma;</p>
+</li>
+<li>
+<p class="font_8">Gráfico de Barras;</p>
+</li>
+<li>
+<p class="font_8">Gráfico de marcos do projeto;</p>
+</li>
+<li>Etc&#8230;</li>
+</ul>
+<p><span style="color:#ffffff;">_</span></p>
+<p class="font_8"><strong>  9. Conclusões</strong></p>
+<p class="font_8" style="text-align:justify;">    Identificar se o projeto é viável ou não, apresentando os motivos que o levaram a tal constatação, resgatando sumariamente os tópicos anteriores do documento.</p>
+<p class="font_8" style="text-align:justify;">Se preferir utilize uma matriz de análise de viabilidade para facilitar.</p>
+<p class="font_8" style="text-align:justify;"><span style="color:#ffffff;">_</span></p>
+<p class="font_8" style="text-align:center;"><a href="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file9.png"><img data-attachment-id="99" data-permalink="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/file9/" data-orig-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file9.png" data-orig-size="486,675" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="file9" data-image-description="" data-medium-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file9.png?w=171&#038;h=238" data-large-file="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file9.png?w=486" class="alignnone wp-image-99 " style="border:1px solid #ffffff;" src="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file9.png?w=171&#038;h=238" alt="file9" width="171" height="238" srcset="https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file9.png?w=171&amp;h=238 171w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file9.png?w=342&amp;h=476 342w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file9.png?w=108&amp;h=150 108w, https://monitoriadeengenhariadesoftware.files.wordpress.com/2015/10/file9.png?w=216&amp;h=300 216w" sizes="(max-width: 171px) 100vw, 171px" /></a><span style="color:#ffffff;">_</span></p>
+<p class="font_8"><strong>Referências Bibliográficas:</strong></p>
+<pre class="font_8">Sommerville, Ian. <strong>Engenharia de Software</strong> - 9. ed. São Paulo, 2011, p 70;</pre>
+<pre class="font_8"><strong>Guia PMBOK</strong> 4a Ed. - EUA : Project Management Institute, 2008;</pre>
+<pre class="font_8"><strong>Rational Unified Process</strong> (RUP) document templates;</pre>
+<pre class="font_8">Chung, W., C. e R. Y. Wang, <strong>Introducion to Information Quality</strong>, 2011;</pre>
+<pre class="font_8">We reserve the rights for some potential vector used in any post to http://all-free-download.com/free-vector/ and http://www.freepik.com/ and their respective authors.</pre>
+<p class="font_8">Última atualização: 25/02/2017</p>
+<div id="atatags-370373-5c9a50d534ae0">
+        <script type="text/javascript">
+            __ATA.cmd.push(function() {
+                __ATA.initVideoSlot('atatags-370373-5c9a50d534ae0', {
+                    sectionId: '370373',
+                    format: 'inread'
+                });
+            });
+        </script>
+    </div>		<div class="wpcnt">
+			<div class="wpa wpmrec">
+				<span class="wpa-about">Anúncios</span>
+				<div class="u">		<div style="padding-bottom:15px;width:300px;height:250px;float:left;margin-right:5px;margin-top:0px">
+		<div id="atatags-26942-5c9a50d534b10">
+			<script type="text/javascript">
+			__ATA.cmd.push(function() {
+				__ATA.initSlot('atatags-26942-5c9a50d534b10',  {
+					collapseEmpty: 'before',
+					sectionId: '26942',
+					width: 300,
+					height: 250
+				});
+			});
+			</script>
+		</div></div>		<div style="padding-bottom:15px;width:300px;height:250px;float:left;margin-top:0px">
+		<div id="atatags-114160-5c9a50d534b12">
+			<script type="text/javascript">
+			__ATA.cmd.push(function() {
+				__ATA.initSlot('atatags-114160-5c9a50d534b12',  {
+					collapseEmpty: 'before',
+					sectionId: '114160',
+					width: 300,
+					height: 250
+				});
+			});
+			</script>
+		</div></div></div>
+				
+			</div>
+		</div><div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-2" class="share-twitter sd-button share-icon" href="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/?share=twitter" target="_blank" title="Clique para compartilhar no Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-2" class="share-facebook sd-button share-icon" href="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/?share=facebook" target="_blank" title="Clique para compartilhar no Facebook"><span>Facebook</span></a></li><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="" class="share-email sd-button share-icon" href="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/06/estudo-de-viabilidade-de-software/?share=email" target="_blank" title="Clique para enviar por email a um amigo"><span>E-mail</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-100843002-2-5c9a50d539b30' data-src='//widgets.wp.com/likes/index.html?ver=20190321#blog_id=100843002&amp;post_id=2&amp;origin=monitoriadeengenhariadesoftware.wordpress.com&amp;obj_id=100843002-2-5c9a50d539b30' data-name='like-post-frame-100843002-2-5c9a50d539b30'><h3 class='sd-title'>Curtir isso:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Curtir</span></span> <span class="loading">Carregando...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>			</div><!--/.post-content-->
+
+		
+			<div class="post-meta-container clear">
+				
+	<div class="post-author">
+		<i class="fa fa-user"></i>
+		<div class="post-author-content">
+			<h4>Monitoria de Engenharia de Software</h4>
+			<p>Auxílio e posts relacionados ao assunto de engenharia de software.</p>
+
+			<div class="author-links">
+				<a class="author-link-posts" title="Arquivo por Autor" href="https://monitoriadeengenhariadesoftware.wordpress.com/author/monitoriadeengenhariadesoftware/">
+					<i class="fa fa-archive"></i>
+					Arquivo por Autor				</a>
+									<a class="author-link-website" title="Site do Autor" href="https://monitoriadeengenhariadesoftware.wordpress.com">
+						<i class="fa fa-home"></i>
+						Site do Autor					</a>
+							</div> <!-- /author-links -->
+
+		</div> <!-- /post-author-content -->
+	</div> <!-- /post-author -->
+
+
+				<div class="post-meta clear">
+					
+	<time class="post-date updated" datetime="2016-09-06">
+		<i class="fa fa-clock-o"></i>
+		setembro 6, 2016	</time>
+
+				<p class="post-categories"><i class="fa fa-folder-open"></i><a href="https://monitoriadeengenhariadesoftware.wordpress.com/category/templates/" rel="category tag">Templates</a></p>
+	
+			<p class="post-tags"><i class="fa fa-tag"></i><a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/engenharia-de-software/" rel="tag">Engenharia de Software</a>, <a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/estudo-de-viabilidade/" rel="tag">Estudo de Viabilidade</a>, <a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/estudo-de-viabilidade-de-software/" rel="tag">Estudo de Viabilidade de Software</a>, <a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/feasibility-study/" rel="tag">Feasibility study</a>, <a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/pieces/" rel="tag">PIECES</a>, <a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/rup/" rel="tag">RUP</a>, <a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/software/" rel="tag">Software</a>, <a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/viabilidade-economica/" rel="tag">Viabilidade Econômica</a>, <a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/viabilidade-operacional/" rel="tag">Viabilidade Operacional</a>, <a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/viabilidade-organizacional/" rel="tag">Viabilidade Organizacional</a>, <a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/viabilidade-tecnica/" rel="tag">Viabilidade Técnica</a></p>
+	
+					
+	<div class="post-nav clear">
+					<a class="post-nav-prev" title="Post anterior: SQL Joins" href="https://monitoriadeengenhariadesoftware.wordpress.com/2016/06/30/sql-joins/">
+				Post anterior			</a>
+		
+					<a class="post-nav-next" title="Próximo post: Diagrama de Atividade" href="https://monitoriadeengenhariadesoftware.wordpress.com/2016/09/10/diagrama-de-atividade/">
+				Próximo post			</a>
+		
+		
+
+	</div>
+
+					</div>
+			</div> <!-- /post-meta-container -->
+			
+
+
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Deixe um comentário <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2016/09/06/estudo-de-viabilidade-de-software/#respond" style="display:none;">Cancelar resposta</a></small></h3>			<form action="https://monitoriadeengenhariadesoftware.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="1bea5b4d90" /><input type="hidden" name="_wp_http_referer" value="/2016/09/06/estudo-de-viabilidade-de-software/" />
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest" />
+
+<div class="comment-form-field comment-textarea">
+	<label for="comment">Digite seu comentário aqui...</label>
+	<div id="comment-form-comment"><textarea id="comment" name="comment" title="Digite seu comentário aqui..."></textarea></div>
+</div>
+
+<div id="comment-form-identity">
+	<div id="comment-form-nascar">
+		<p>Preencha os seus dados abaixo ou clique em um ícone para log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="#comment-form-guest" id="postas-guest" class="nascar-signin-link"
+                   title="Login via Convidado">
+									</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" class="nascar-signin-link"
+                   title="Login via WordPress.com">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#0087be" d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.57zM3.008 12c0 3.56 2.07 6.634 5.068 8.092L3.788 8.342c-.5 1.117-.78 2.354-.78 3.658zm15.06-.454c0-1.112-.398-1.88-.74-2.48-.456-.74-.883-1.368-.883-2.11 0-.825.627-1.595 1.51-1.595.04 0 .078.006.116.008-1.598-1.464-3.73-2.36-6.07-2.36-3.14 0-5.904 1.613-7.512 4.053.21.008.41.012.58.012.94 0 2.395-.114 2.395-.114.484-.028.54.684.057.74 0 0-.487.058-1.03.086l3.275 9.74 1.968-5.902-1.4-3.838c-.485-.028-.944-.085-.944-.085-.486-.03-.43-.77.056-.742 0 0 1.484.114 2.368.114.94 0 2.397-.114 2.397-.114.486-.028.543.684.058.74 0 0-.488.058-1.03.086l3.25 9.665.897-2.997c.456-1.17.684-2.137.684-2.907zm1.82-3.86c.04.286.06.593.06.924 0 .912-.17 1.938-.683 3.22l-2.746 7.94c2.672-1.558 4.47-4.454 4.47-7.77 0-1.564-.4-3.033-1.1-4.314zM12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></g></svg>				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="https://public-api.wordpress.com/connect/?googleplus-sign-in=https%3A%2F%2Fmonitoriadeengenhariadesoftware.wordpress.com&#038;color_scheme=light" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" class="nascar-signin-link"
+                   title="Login via Twitter">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#1DA1F2" d="M22.23 5.924c-.736.326-1.527.547-2.357.646.847-.508 1.498-1.312 1.804-2.27-.793.47-1.67.812-2.606.996C18.325 4.498 17.258 4 16.078 4c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935-3.41-.17-6.433-1.804-8.457-4.287-.353.607-.556 1.312-.556 2.064 0 1.424.724 2.68 1.825 3.415-.673-.022-1.305-.207-1.86-.514v.052c0 1.988 1.415 3.647 3.293 4.023-.344.095-.707.145-1.08.145-.265 0-.522-.026-.773-.074.522 1.63 2.038 2.817 3.833 2.85-1.404 1.1-3.174 1.757-5.096 1.757-.332 0-.66-.02-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.53.802-.578 1.497-1.3 2.047-2.124z"/></g></svg>				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" class="nascar-signin-link"
+                   title="Login via Facebook">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#3B5998" d="M20.007 3H3.993C3.445 3 3 3.445 3 3.993v16.013c0 .55.445.994.993.994h8.62v-6.97H10.27V11.31h2.346V9.31c0-2.325 1.42-3.59 3.494-3.59.993 0 1.847.073 2.096.106v2.43h-1.438c-1.128 0-1.346.537-1.346 1.324v1.734h2.69l-.35 2.717h-2.34V21h4.587c.548 0 .993-.445.993-.993V3.993c0-.548-.445-.993-.993-.993z"/></g></svg>				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Gravatar" width="25" class="no-grav" />
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(obrigatório)</span> <span class="nopublish">(Nunca tornar endereço público)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Nome <span class="required">(obrigatório)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Site</label>
+					<div class="comment-form-input"><input id="url" name="url" type="url" value="" /></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Logotipo do WordPress.com" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="" />
+						<p class="comment-form-posting-as pa-wordpress">
+			<strong></strong>
+			Você está comentando utilizando sua conta WordPress.com.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'wordpress' );">Sair</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Alterar</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#0087be" d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.57zM3.008 12c0 3.56 2.07 6.634 5.068 8.092L3.788 8.342c-.5 1.117-.78 2.354-.78 3.658zm15.06-.454c0-1.112-.398-1.88-.74-2.48-.456-.74-.883-1.368-.883-2.11 0-.825.627-1.595 1.51-1.595.04 0 .078.006.116.008-1.598-1.464-3.73-2.36-6.07-2.36-3.14 0-5.904 1.613-7.512 4.053.21.008.41.012.58.012.94 0 2.395-.114 2.395-.114.484-.028.54.684.057.74 0 0-.487.058-1.03.086l3.275 9.74 1.968-5.902-1.4-3.838c-.485-.028-.944-.085-.944-.085-.486-.03-.43-.77.056-.742 0 0 1.484.114 2.368.114.94 0 2.397-.114 2.397-.114.486-.028.543.684.058.74 0 0-.488.058-1.03.086l3.25 9.665.897-2.997c.456-1.17.684-2.137.684-2.907zm1.82-3.86c.04.286.06.593.06.924 0 .912-.17 1.938-.683 3.22l-2.746 7.94c2.672-1.558 4.47-4.454 4.47-7.77 0-1.564-.4-3.033-1.1-4.314zM12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Foto do Google" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="" />
+						<p class="comment-form-posting-as pa-googleplus">
+			<strong></strong>
+			Você está comentando utilizando sua conta Google.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'googleplus' );">Sair</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Alterar</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" x="0px" y="0px" viewBox="0 0 60 60" ><path fill="#519bf7" d="M56.3,30c0,-1.6 -0.2,-3.4 -0.6,-5h-3.1H42.2H30v10.6h14.8C44,39.3 42,42 39.1,43.9l8.8,6.8C53,46 56.3,39 56.3,30z" /><path fill="#3db366" d="M30,57.5c6.7,0 13.1,-2.4 17.9,-6.8l-8.8,-6.8c-2.5,1.6 -5.6,2.4 -9.1,2.4c-7.2,0 -13.3,-4.7 -15.4,-11.2l-9.3,7.1C9.8,51.3 19.1,57.5 30,57.5z" /><path fill="#fdc600" d="M5.3,42.2l9.3,-7.1c-0.5,-1.6 -0.8,-3.3 -0.8,-5.1s0.3,-3.5 0.8,-5.1l-9.3,-7.1C3.5,21.5 2.5,25.6 2.5,30S3.5,38.5 5.3,42.2z" /><path fill="#f15b44" d="M40.1,17.4l8,-8C43.3,5.1 37,2.5 30,2.5C19.1,2.5 9.8,8.7 5.3,17.8l9.3,7.1c2.1,-6.5 8.2,-11.1 15.4,-11.1C33.9,13.7 37.4,15.1 40.1,17.4z" /></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Imagem do Twitter" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" />
+						<p class="comment-form-posting-as pa-twitter">
+			<strong></strong>
+			Você está comentando utilizando sua conta Twitter.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'twitter' );">Sair</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Alterar</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#1DA1F2" d="M22.23 5.924c-.736.326-1.527.547-2.357.646.847-.508 1.498-1.312 1.804-2.27-.793.47-1.67.812-2.606.996C18.325 4.498 17.258 4 16.078 4c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935-3.41-.17-6.433-1.804-8.457-4.287-.353.607-.556 1.312-.556 2.064 0 1.424.724 2.68 1.825 3.415-.673-.022-1.305-.207-1.86-.514v.052c0 1.988 1.415 3.647 3.293 4.023-.344.095-.707.145-1.08.145-.265 0-.522-.026-.773-.074.522 1.63 2.038 2.817 3.833 2.85-1.404 1.1-3.174 1.757-5.096 1.757-.332 0-.66-.02-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.53.802-.578 1.497-1.3 2.047-2.124z"/></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Foto do Facebook" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" />
+						<p class="comment-form-posting-as pa-facebook">
+			<strong></strong>
+			Você está comentando utilizando sua conta Facebook.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'facebook' );">Sair</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Alterar</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24" ><rect x="0" fill="none" width="24" height="24"/><g><path fill="#3B5998" d="M20.007 3H3.993C3.445 3 3 3.445 3 3.993v16.013c0 .55.445.994.993.994h8.62v-6.97H10.27V11.31h2.346V9.31c0-2.325 1.42-3.59 3.494-3.59.993 0 1.847.073 2.096.106v2.43h-1.438c-1.128 0-1.346.537-1.346 1.324v1.734h2.69l-.35 2.717h-2.34V21h4.587c.548 0 .993-.445.993-.993V3.993c0-.548-.445-.993-.993-.993z"/></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancelar</a></div>
+		<p>Conectando a %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;"/> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Avise-me sobre novos comentários por email.</label></p></div>
+
+
+
+
+<p class="form-submit"><input name="submit" type="submit" id="comment-submit" class="submit" value="Publicar comentário" /> <input type='hidden' name='comment_post_ID' value='2' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="36201b2638" /></p>
+<input type="hidden" name="genseq" value="1553617109" />
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="117"/></p>			</form>
+			</div><!-- #respond -->
+	<div style="clear: both"></div>
+	</div> <!-- /post -->
+
+
+		</div> <!-- /content -->
+
+		
+
+	</div> <!-- /section-inner -->
+</div> <!-- /wrapper -->
+
+
+	<div class="footer bg-graphite" id="footer">
+		<div class="section-inner row clear">
+
+			
+				<div class="column column-1 one-third medium-padding">
+					<div class="widgets">
+						<div id="tag_cloud-5" class="widget widget_tag_cloud"><div class="widget-content clear"><h3 class="widget-title">Categorias</h3><div style="overflow: hidden;"><a href="https://monitoriadeengenhariadesoftware.wordpress.com/category/drops/" style="font-size: 170%; padding: 1px; margin: 1px;"  title="Drops (3)">Drops</a> <a href="https://monitoriadeengenhariadesoftware.wordpress.com/category/notacao/" style="font-size: 275%; padding: 1px; margin: 1px;"  title="Notação (6)">Notação</a> <a href="https://monitoriadeengenhariadesoftware.wordpress.com/category/processos/" style="font-size: 170%; padding: 1px; margin: 1px;"  title="Processos (3)">Processos</a> <a href="https://monitoriadeengenhariadesoftware.wordpress.com/category/templates/" style="font-size: 100%; padding: 1px; margin: 1px;"  title="Templates (1)">Templates</a> </div></div></div>					</div>
+				</div>
+
+			 <!-- /footer-a -->
+
+			
+				<div class="column column-2 one-third medium-padding">
+					<div class="widgets">
+						<div id="wp_tag_cloud-3" class="widget wp_widget_tag_cloud"><div class="widget-content clear"><h3 class="widget-title">Tags</h3><div style="overflow:hidden"><a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/analise-de-dominio/" class="tag-cloud-link tag-link-44742989 tag-link-position-1" style="font-size: 8pt;" aria-label="Análise de Domínio (1 item)">Análise de Domínio</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/ataques/" class="tag-cloud-link tag-link-529270 tag-link-position-2" style="font-size: 8pt;" aria-label="Ataques (1 item)">Ataques</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/banco-de-dados/" class="tag-cloud-link tag-link-4827 tag-link-position-3" style="font-size: 8pt;" aria-label="Banco de Dados (1 item)">Banco de Dados</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/casos-de-uso/" class="tag-cloud-link tag-link-2196437 tag-link-position-4" style="font-size: 8pt;" aria-label="Casos de Uso (1 item)">Casos de Uso</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/conjuntos/" class="tag-cloud-link tag-link-368757 tag-link-position-5" style="font-size: 8pt;" aria-label="Conjuntos (1 item)">Conjuntos</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/cracker/" class="tag-cloud-link tag-link-46844 tag-link-position-6" style="font-size: 8pt;" aria-label="Cracker (1 item)">Cracker</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/cyber-attacks/" class="tag-cloud-link tag-link-3239317 tag-link-position-7" style="font-size: 8pt;" aria-label="Cyber Attacks (1 item)">Cyber Attacks</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/diagrama-de-atividade/" class="tag-cloud-link tag-link-5843843 tag-link-position-8" style="font-size: 8pt;" aria-label="Diagrama de Atividade (1 item)">Diagrama de Atividade</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/diagrama-de-casos-de-uso/" class="tag-cloud-link tag-link-5106000 tag-link-position-9" style="font-size: 8pt;" aria-label="Diagrama de Casos de Uso (1 item)">Diagrama de Casos de Uso</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/diagrama-de-colaboracao/" class="tag-cloud-link tag-link-5519344 tag-link-position-10" style="font-size: 8pt;" aria-label="Diagrama de Colaboração (1 item)">Diagrama de Colaboração</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/diagrama-de-comunicacao/" class="tag-cloud-link tag-link-5519343 tag-link-position-11" style="font-size: 8pt;" aria-label="Diagrama de Comunicação (1 item)">Diagrama de Comunicação</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/diagrama-de-sequencia/" class="tag-cloud-link tag-link-5245848 tag-link-position-12" style="font-size: 8pt;" aria-label="Diagrama de Sequência (1 item)">Diagrama de Sequência</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/diagrama-de-tempo/" class="tag-cloud-link tag-link-5105999 tag-link-position-13" style="font-size: 8pt;" aria-label="Diagrama de Tempo (1 item)">Diagrama de Tempo</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/diagrama-de-venn/" class="tag-cloud-link tag-link-24602279 tag-link-position-14" style="font-size: 8pt;" aria-label="Diagrama de Venn (1 item)">Diagrama de Venn</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/diagramas/" class="tag-cloud-link tag-link-371322 tag-link-position-15" style="font-size: 18.338461538462pt;" aria-label="Diagramas (5 itens)">Diagramas</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/diagramas-de-comportamento/" class="tag-cloud-link tag-link-408108520 tag-link-position-16" style="font-size: 18.338461538462pt;" aria-label="Diagramas de comportamento (5 itens)">Diagramas de comportamento</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/diagramas-estruturais/" class="tag-cloud-link tag-link-104309949 tag-link-position-17" style="font-size: 8pt;" aria-label="Diagramas estruturais (1 item)">Diagramas estruturais</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/domain-analysis/" class="tag-cloud-link tag-link-1179840 tag-link-position-18" style="font-size: 8pt;" aria-label="Domain Analysis (1 item)">Domain Analysis</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/dominio/" class="tag-cloud-link tag-link-176024 tag-link-position-19" style="font-size: 8pt;" aria-label="Domínio (1 item)">Domínio</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/engenharia-de-software/" class="tag-cloud-link tag-link-46795 tag-link-position-20" style="font-size: 22pt;" aria-label="Engenharia de Software (8 itens)">Engenharia de Software</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/escopo-da-uml/" class="tag-cloud-link tag-link-408108416 tag-link-position-21" style="font-size: 18.338461538462pt;" aria-label="Escopo da UML (5 itens)">Escopo da UML</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/estados/" class="tag-cloud-link tag-link-286075 tag-link-position-22" style="font-size: 8pt;" aria-label="Estados (1 item)">Estados</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/estudo-de-viabilidade/" class="tag-cloud-link tag-link-5054175 tag-link-position-23" style="font-size: 8pt;" aria-label="Estudo de Viabilidade (1 item)">Estudo de Viabilidade</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/estudo-de-viabilidade-de-software/" class="tag-cloud-link tag-link-408102912 tag-link-position-24" style="font-size: 8pt;" aria-label="Estudo de Viabilidade de Software (1 item)">Estudo de Viabilidade de Software</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/feasibility-study/" class="tag-cloud-link tag-link-767863 tag-link-position-25" style="font-size: 8pt;" aria-label="Feasibility study (1 item)">Feasibility study</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/hacker/" class="tag-cloud-link tag-link-6828 tag-link-position-26" style="font-size: 8pt;" aria-label="Hacker (1 item)">Hacker</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/hacktivismo/" class="tag-cloud-link tag-link-457288 tag-link-position-27" style="font-size: 8pt;" aria-label="Hacktivismo (1 item)">Hacktivismo</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/infografico/" class="tag-cloud-link tag-link-3890121 tag-link-position-28" style="font-size: 11.876923076923pt;" aria-label="Infográfico (2 itens)">Infográfico</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/malwares/" class="tag-cloud-link tag-link-415197 tag-link-position-29" style="font-size: 8pt;" aria-label="Malwares (1 item)">Malwares</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/modelagem-de-sistemas/" class="tag-cloud-link tag-link-53334 tag-link-position-30" style="font-size: 19.846153846154pt;" aria-label="Modelagem de Sistemas (6 itens)">Modelagem de Sistemas</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/maquina-de-estados/" class="tag-cloud-link tag-link-23476188 tag-link-position-31" style="font-size: 8pt;" aria-label="Máquina de Estados (1 item)">Máquina de Estados</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/midias-sociais/" class="tag-cloud-link tag-link-1224939 tag-link-position-32" style="font-size: 8pt;" aria-label="Mídias Sociais (1 item)">Mídias Sociais</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/pieces/" class="tag-cloud-link tag-link-36324 tag-link-position-33" style="font-size: 8pt;" aria-label="PIECES (1 item)">PIECES</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/processo/" class="tag-cloud-link tag-link-46793 tag-link-position-34" style="font-size: 8pt;" aria-label="Processo (1 item)">Processo</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/rup/" class="tag-cloud-link tag-link-46803 tag-link-position-35" style="font-size: 8pt;" aria-label="RUP (1 item)">RUP</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/seguranca-da-informacao/" class="tag-cloud-link tag-link-424996 tag-link-position-36" style="font-size: 11.876923076923pt;" aria-label="Segurança da Informação (2 itens)">Segurança da Informação</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/software/" class="tag-cloud-link tag-link-581 tag-link-position-37" style="font-size: 20.923076923077pt;" aria-label="Software (7 itens)">Software</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/software-engineering/" class="tag-cloud-link tag-link-11176 tag-link-position-38" style="font-size: 8pt;" aria-label="Software Engineering (1 item)">Software Engineering</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/sql/" class="tag-cloud-link tag-link-10346 tag-link-position-39" style="font-size: 8pt;" aria-label="SQL (1 item)">SQL</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/sql-joins/" class="tag-cloud-link tag-link-1158283 tag-link-position-40" style="font-size: 8pt;" aria-label="SQL Joins (1 item)">SQL Joins</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/statechart/" class="tag-cloud-link tag-link-3859843 tag-link-position-41" style="font-size: 11.876923076923pt;" aria-label="Statechart (2 itens)">Statechart</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/state-diagram/" class="tag-cloud-link tag-link-5572033 tag-link-position-42" style="font-size: 8pt;" aria-label="State Diagram (1 item)">State Diagram</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/timing-diagram/" class="tag-cloud-link tag-link-141730212 tag-link-position-43" style="font-size: 8pt;" aria-label="Timing Diagram (1 item)">Timing Diagram</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/uml/" class="tag-cloud-link tag-link-3616 tag-link-position-44" style="font-size: 20.923076923077pt;" aria-label="UML (7 itens)">UML</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/use-case/" class="tag-cloud-link tag-link-20096 tag-link-position-45" style="font-size: 8pt;" aria-label="Use Case (1 item)">Use Case</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/viabilidade-economica/" class="tag-cloud-link tag-link-17608426 tag-link-position-46" style="font-size: 8pt;" aria-label="Viabilidade Econômica (1 item)">Viabilidade Econômica</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/viabilidade-operacional/" class="tag-cloud-link tag-link-407730258 tag-link-position-47" style="font-size: 8pt;" aria-label="Viabilidade Operacional (1 item)">Viabilidade Operacional</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/viabilidade-organizacional/" class="tag-cloud-link tag-link-407730262 tag-link-position-48" style="font-size: 8pt;" aria-label="Viabilidade Organizacional (1 item)">Viabilidade Organizacional</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/viabilidade-tecnica/" class="tag-cloud-link tag-link-5105243 tag-link-position-49" style="font-size: 8pt;" aria-label="Viabilidade Técnica (1 item)">Viabilidade Técnica</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/visao-de-caso-de-uso/" class="tag-cloud-link tag-link-74006005 tag-link-position-50" style="font-size: 11.876923076923pt;" aria-label="Visão de caso de uso (2 itens)">Visão de caso de uso</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/visao-de-implantacao/" class="tag-cloud-link tag-link-408108498 tag-link-position-51" style="font-size: 8pt;" aria-label="Visão de implantação (1 item)">Visão de implantação</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/visao-de-implementacao/" class="tag-cloud-link tag-link-51617816 tag-link-position-52" style="font-size: 8pt;" aria-label="Visão de implementação (1 item)">Visão de implementação</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/visao-de-processo/" class="tag-cloud-link tag-link-408108473 tag-link-position-53" style="font-size: 11.876923076923pt;" aria-label="Visão de processo (2 itens)">Visão de processo</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/visao-logica/" class="tag-cloud-link tag-link-408108457 tag-link-position-54" style="font-size: 8pt;" aria-label="Visão Lógica (1 item)">Visão Lógica</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/visoes/" class="tag-cloud-link tag-link-297963 tag-link-position-55" style="font-size: 14.461538461538pt;" aria-label="Visões (3 itens)">Visões</a>
+<a href="https://monitoriadeengenhariadesoftware.wordpress.com/tag/virus/" class="tag-cloud-link tag-link-6827 tag-link-position-56" style="font-size: 8pt;" aria-label="Vírus (1 item)">Vírus</a></div></div></div>					</div> <!-- /widgets -->
+				</div>
+
+			 <!-- /footer-b -->
+
+			
+				<div class="column column-3 one-third medium-padding">
+					<div class="widgets">
+						<div id="facebook-likebox-3" class="widget widget_facebook_likebox"><div class="widget-content clear"><h3 class="widget-title"><a href="https://www.facebook.com/Monitoriadeengenhariadesoftware">Facebook</a></h3>		<div id="fb-root"></div>
+		<div class="fb-page" data-href="https://www.facebook.com/Monitoriadeengenhariadesoftware" data-width="340"  data-height="432" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
+		<div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Monitoriadeengenhariadesoftware"><a href="https://www.facebook.com/Monitoriadeengenhariadesoftware">Facebook</a></blockquote></div>
+		</div>
+		</div></div>					</div> <!-- /widgets -->
+				</div>
+
+			 <!-- /footer-c -->
+
+		</div> <!-- /section-inner -->
+	</div> <!-- /footer -->
+
+
+	<div class="credits section bg-dark small-padding">
+		<div class="credits-inner section-inner clear">
+
+			<p class="credits-left fleft">
+				<a href="https://wordpress.com/?ref=footer_website">Crie um website ou blog gratuito no WordPress.com.</a>
+				
+				 			</p>
+
+			<p class="credits-right fright">
+
+				<a class="tothetop" title="Para o topo" href="#">Acima &uarr;</a>
+			</p>
+		</div> <!-- /credits-inner -->
+	</div> <!-- /credits -->
+
+<!--  -->
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201913y'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Conectando\u2026","submittingText":"Postando Coment\u00e1rio\u2026","postCommentText":"Publicar coment\u00e1rio","connectingToText":"Conectando a %s","commentingAsText":"%1$s: Voc\u00ea est\u00e1 comentando utilizando sua conta %2$s.","logoutText":"Sair","loginText":"Fazer login","connectURL":"https:\/\/monitoriadeengenhariadesoftware.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/monitoriadeengenhariadesoftware.wordpress.com\/wp-login.php?action=logout&_wpnonce=e161bb4340","homeURL":"https:\/\/monitoriadeengenhariadesoftware.wordpress.com\/","postID":"2","gravDefault":"identicon","enterACommentError":"Por favor escreva um coment\u00e1rio","enterEmailError":"Insira seu endere\u00e7o de email aqui","invalidEmailError":"Email inv\u00e1lido","enterAuthorError":"Digite o seu nome aqui","gravatarFromEmail":"Essa foto aparecer\u00e1 sempre que voc\u00ea deixar um coment\u00e1rio. Clicar para personaliz\u00e1-la.","logInToExternalAccount":"Fa\u00e7a login para usar detalhes de uma de suas conta.","change":"Alterar","changeAccount":"Alterar Conta","comment_registration":"0","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1551752381j'></script>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Adicione suas ideias aqui... (opcional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Publicar em</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Cancelar</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblogar Post" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="100843002" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://monitoriadeengenhariadesoftware.wordpress.com" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="Monitoria de Engenharia de Software" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="82bec49247" /><input type="hidden" name="_wp_http_referer" value="/2016/09/06/estudo-de-viabilidade-de-software/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/monitoriadeengenhariadesoftware.wordpress.com\/2016\/09\/06\/estudo-de-viabilidade-de-software\/":2};
+	</script>
+					<div id="sharing_email" style="display: none;">
+		<form action="/2016/09/06/estudo-de-viabilidade-de-software/" method="post">
+			<label for="target_email">Enviar para oendereço de e-mail</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+			
+				<label for="source_name">Seu Nome</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">Seu endereço de e-mail</label>
+				<input type="email" name="source_email" id="source_email" value="" />
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" title="This field is for validation and should not be changed" />
+			
+			<div
+				class="g-recaptcha"
+				data-sitekey="6LcmyE0UAAAAALID28yVNg7pFCodGaArJzHitez_"
+				data-theme="light"
+				data-type="image"
+				data-tabindex="0"></div>
+			<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=pt-br" async></script>
+			
+			<img style="float: right; display: none" class="loading" src="https://s2.wp.com/wp-content/mu-plugins/post-flair/sharing/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="Enviar e-mail" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel" role="button">Cancelar</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post não foi enviado - verifique os seus endereços de e-mail!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Verificação de e-mail falhou, tente novamente			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Desculpe, seu blog não pode compartilhar posts por e-mail.			</div>
+		</form>
+	</div>
+<div class="widget widget_eu_cookie_law_widget"><div
+	class="hide-on-button ads-active"
+	data-hide-timeout="30"
+	data-consent-expiration="180"
+	id="eu-cookie-law"
+>
+	<form method="post">
+		<input type="submit" value="Fechar e aceitar" class="accept" />
+
+		Privacidade e cookies: Esse site utiliza cookies. Ao continuar a usar este site, você concorda com seu uso. <br />
+Para saber mais, inclusive sobre como controlar os cookies, consulte aqui:
+		<a href="https://automattic.com/cookies" >
+			Política de cookies		</a>
+ </form>
+</div>
+</div><link rel='stylesheet' id='all-css-0-3' href='https://s0.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel.css?m=1524699534h&cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var comment_like_text = {"loading":"Carregando..."};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jpfbembed = {"appid":"249643311490","locale":"pt_BR"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var actionbardata = {"siteID":"100843002","siteName":"Monitoria de Engenharia de Software","siteURL":"http:\/\/monitoriadeengenhariadesoftware.wordpress.com","icon":"<img alt='' src='https:\/\/secure.gravatar.com\/blavatar\/08cf9bce74f1205e7a12be01e85d7eb6?s=50&d=https%3A%2F%2Fs2.wp.com%2Fi%2Flogo%2Fwpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/baskerville","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fmonitoriadeengenhariadesoftware.wordpress.com%2F2016%2F09%2F06%2Festudo-de-viabilidade-de-software%2F&signup_flow=account","themeURL":"","xhrURL":"https:\/\/monitoriadeengenhariadesoftware.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"a7118bf6eb","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"77a2898347\" \/>","referer":"https:\/\/monitoriadeengenhariadesoftware.wordpress.com\/2016\/09\/06\/estudo-de-viabilidade-de-software\/","canFollow":"1","feedID":"38442145","statusMessage":"","customizeLink":"https:\/\/monitoriadeengenhariadesoftware.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fmonitoriadeengenhariadesoftware.wordpress.com%2F2016%2F09%2F06%2Festudo-de-viabilidade-de-software%2F","postID":"2","shortlink":"https:\/\/wp.me\/p6P7S2-2","canEditPost":"","editLink":"https:\/\/wordpress.com\/post\/monitoriadeengenhariadesoftware.wordpress.com\/2","statsLink":"https:\/\/wordpress.com\/stats\/post\/2\/monitoriadeengenhariadesoftware.wordpress.com","i18n":{"view":"Exibir site","follow":"Seguir","following":"Seguindo","edit":"Editar","login":"Fazer login","signup":"Registre-se","customize":"Personalizar","report":"Denunciar este conte\u00fado","themeInfo":"Obtenha o tema: Baskerville","shortlink":"Copiar link curto","copied":"Copiado","followedText":"Novos posts deste site ser\u00e3o exibidos agora em seu <a href=\"https:\/\/wordpress.com\/\">Leitor<\/a>","foldBar":"Esconder esta barra","unfoldBar":"Mostrar esta barra","editSubs":"Gerenciar assinaturas","viewReader":"Visualizar site no Leitor","viewReadPost":"Ver post no Leitor","subscribe":"Cadastre-me","enterEmail":"Insira seu endere\u00e7o de email","followers":"","alreadyUser":"J\u00e1 tem uma conta do WordPress.com? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fmonitoriadeengenhariadesoftware.wordpress.com%2F2016%2F09%2F06%2Festudo-de-viabilidade-de-software%2F&signup_flow=account\">Fa\u00e7a login agora.<\/a>","stats":"Estat\u00edsticas"}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"pt","ajaxurl":"https:\/\/monitoriadeengenhariadesoftware.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"9a7ee10d14","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Coment\u00e1rio","post_comment":"Publicar coment\u00e1rio","write_comment":"Escreva um Coment\u00e1rio","loading_comments":"Carregando coment\u00e1rios...","download_original":"Visualizar tamanho original <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Certifique-se de enviar algum texto com o seu coment\u00e1rio.","no_comment_email":"Informe um endere\u00e7o de email para comentar.","no_comment_author":"Forne\u00e7a seu nome para comentar.","comment_post_error":"Desculpe, mas ocorreu um erro ao postar seu coment\u00e1rio. Tente novamente mais tarde.","comment_approved":"Seu coment\u00e1rio foi aprovado.","comment_unapproved":"Seu coment\u00e1rio est\u00e1 aguardando modera\u00e7\u00e3o.","camera":"C\u00e2mera","aperture":"Abertura","shutter_speed":"Velocidade do Obturador","focal_length":"Comprimento Focal","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/monitoriadeengenhariadesoftware.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fmonitoriadeengenhariadesoftware.wordpress.com%2F2016%2F09%2F06%2Festudo-de-viabilidade-de-software%2F","blog_id":"100843002","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (obrigat\u00f3rio)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Nome (obrigat\u00f3rio)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Site<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblogar","reblogged":"Re-blogado","reblog_add_thoughts":"Adicione suas ideias aqui... (opcional)","reblogging":"Reblogando...","post_reblog":"Post Reblog","stats_query_args":"blog=100843002&v=wpcom&tz=-3&user_id=0&subd=monitoriadeengenhariadesoftware","is_public":"1","reblog_enabled":""};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"pt","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJyVkt1ywiAQhV+oBKvjdHrR6aN0IKxxk+WnLBh9+5LR2KiZtF7BnN3vsByQfRC1dwlcki1LAwesIRyrll/kpGSzCJQbdCwJO2D5nSHDXjlDEBeaa29tkcQZagdaS+4xwDPQjXAPpj3Y0hayllpxB/GARDBgaFUDTF4ZMFXoGvN/dEdwZELzezl0NWVznufG2KKb67GKvYunafnvYxvyWtGc3RhBhECzppP8ejQNJJaQS9V3CIJULxPYQCrBnb7g00IKqu7kVxlE7lQNulACrIaHJCeUMmU6oVUcIkgQy074A8SIw1Wu2pMOKZZJHt5+CtUJvRug624uRw7zz9WWDx1Pl6Wads19UBV9ZqAxITEKS/N1yBaS2FSrS6A+2oX+4DmJHSmMkvcqomvGtUCf9uN1u92s3tbv61X7A6JeaPY='></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>		<iframe src='https://widgets.wp.com/likes/master.html?ver=20190321#ver=20190321&amp;lang=pt-br' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> blogueiros gostam disto:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+<script src="//stats.wp.com/w.js?59" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'100843002','blog_tz':'-3','user_lang':'pt-br','blog_lang':'pt-br','user_id':'0'}]);
+_stq.push(['view', {'blog':'100843002','v':'wpcom','tz':'-3','user_id':'0','post':'2','subd':'monitoriadeengenhariadesoftware'}]);
+_stq.push(['extra', {'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdWFnNncxc1tjZG9XVXhRUFYrYjIuSnFPfDkzZDdZMmg3dU9vXXJUYTFEVTNIQzIlSDBnLFJ2OCZhRXBSNVkta1htOHZDTzBhfFA2RH51ZFF2bmRBcXRFMUZOZ1F6R3NWMC5NbWtbU1RMNUdOLjRYbmtzaGV8TU1lMEI/fElTSUg1cFIreEtxRjdMX2l1bnJFXUZZZjU3X3ZZK3U3d1RJelM2eTJzXV83dVZ1QiZ5dDQ4bURuZVVtdm8mMDlmLEFqeklpfEQua1pMLU1oMVMzK0J4OE91LHJSanU3WE5faUxhQXQ0LVpEWnVveHRHJkNnR25Gb0cmUk90NTNHbFssNUlLUjkxcHE5VFROVUZMP0w3MWhlUyVKdEtCMzhtcDdfMk8='}]);
+_stq.push([ 'clickTrackerInit', '100843002', '2' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>
+<!--
+	generated 29 seconds ago
+	generated in 0.212 seconds
+	served from batcache in 0.005 seconds
+	expires in 271 seconds
+-->

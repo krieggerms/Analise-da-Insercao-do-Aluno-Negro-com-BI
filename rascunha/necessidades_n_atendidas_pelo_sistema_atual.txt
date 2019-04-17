@@ -1,0 +1,10 @@
+2.4. Necessidades Não Atendidas Pelo Sistema Atual
+
+	O Sistema Atual do Banco não cumpre com as seguintes necessidades:
+
+	a. Necessidade de atualização automatizada dos dados: É necessário que atualização de dados seja de forma automática.
+	b. Necessidade de atualização facilitada dos dados: É preciso que o processo de atualização dos dados seja o mais simples possível, ao alcance de pelo menos 1 a 4 cliques.
+	c. Necessidade de gravação automatizada dos dados: É salutar que os dados necessários possam ser inseridos automaticamente.
+	d. Necessidade de agilidade nos processos de importação e exportação de dados: É primordial que essas operações sejam ágeis o suficiente.
+	e. Necessidade de criação facilitada de painéis para análise: É conveniente que a criação desses painéis seja a mais simples possível.
+	f. Necessidade de cadastro de notas em um Banco de Dados: É útil que as notas inseridas posssam ser armazenadas em um Banco de Dados.
