@@ -11,3 +11,8 @@ https://unstats.un.org/unsd/methodology/m49/
 https://www.oobj.com.br/bc/article/quais-os-c%C3%B3digos-de-cada-uf-no-brasil-465.html
 
 ftp://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/municipios_por_regioes_metropolitanas/Situacao_2010a2019/
+
+https://sidra.ibge.gov.br/tabela/1301
+http://datasus.saude.gov.br/noticias/atualizacoes/59-sistemas-e-aplicativos/cadastros-nacionais/312-microrregiao
+http://www2.datasus.gov.br/DATASUS/index.php?area=060206&item=1
+https://sidra.ibge.gov.br/tabela/202#notas-tabela
