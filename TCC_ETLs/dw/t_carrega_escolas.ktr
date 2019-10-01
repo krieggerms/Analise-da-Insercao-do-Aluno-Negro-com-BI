@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>carrega_escolas</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2019&#x2f;09&#x2f;17 22&#x3a;19&#x3a;04.857</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2019&#x2f;09&#x2f;17 22&#x3a;19&#x3a;04.857</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>dw</name>
+    <server>localhost</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>dataWarehouse</database>
+    <port>1433</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>staging</name>
+    <server>localhost</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>db_staging</database>
+    <port>1433</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Table input</from><to>If field value is null</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null</from><to>Table output</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>If field value is null</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue>-1</replaceAllByValue>
+      <replaceAllMask/>
+      <selectFields>N</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>ID_ALUNO</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>NU_IDADE</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>TP_NACIONALIDADE</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>TP_SEXO</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>CO_PAIS_ORIGEM</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>CO_UF_NASC</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>CO_MUNICIPIO_NASC</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>CO_UF_END</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>CO_MUNICIPIO_END</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>TP_ZONA_RESIDENCIAL</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>IN_NECESSIDADE_ESPECIAL</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>TP_MEDIACAO_DIDATICO_PEDAGO</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>TP_ETAPA_ENSINO</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>NU_ANO_CENSO</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>TP_COR_RACA</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>492</xloc>
+      <yloc>374</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Table input</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>staging</connection>
+    <sql>SELECT&#xd;&#xa;   NU_ANO_CENSO,&#xd;&#xa;    CO_ENTIDADE,&#xd;&#xa;    NO_ENTIDADE,&#xd;&#xa;    CO_REGIAO,&#xd;&#xa;    CO_MESORREGIAO,&#xd;&#xa;    CO_MICRORREGIAO,&#xd;&#xa;    CO_UF,&#xd;&#xa;    CO_MUNICIPIO,&#xd;&#xa;    CO_DISTRITO,&#xd;&#xa;    TP_DEPENDENCIA  ,&#xd;&#xa;    TP_LOCALIZACAO  ,&#xd;&#xa;    TP_CATEGORIA_ESCOLA_PRIVADA,&#xd;&#xa;    TP_CONVENIO_PODER_PUBLICO,&#xd;&#xa;    IN_MANT_ESCOLA_PRIVADA_EMP,&#xd;&#xa;    IN_MANT_ESCOLA_PRIVADA_ONG,&#xd;&#xa;    IN_MANT_ESCOLA_PRIVADA_SIND,&#xd;&#xa;    IN_MANT_ESCOLA_PRIVADA_SIST_S,&#xd;&#xa;    IN_MANT_ESCOLA_PRIVADA_S_FINS,&#xd;&#xa;    TP_REGULAMENTACAO,&#xd;&#xa;    IN_AGUA_INEXISTENTE,&#xd;&#xa;    IN_ENERGIA_INEXISTENTE,&#xd;&#xa;    IN_ESGOTO_INEXISTENTE,&#xd;&#xa;    IN_ALIMENTACAO&#xd;&#xa;FROM tb_escolas&#xd;&#xa;WHERE NU_ANO_CENSO BETWEEN 2015 AND 2018</sql>
+    <limit>100</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>321</xloc>
+      <yloc>174</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Table output</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw</connection>
+    <schema/>
+    <table>D_ESCOLA</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>NU_ANO_CENSO</column_name>
+          <stream_name>NU_ANO_CENSO</stream_name>
+        </field>
+        <field>
+          <column_name>CO_ENTIDADE</column_name>
+          <stream_name>CO_ENTIDADE</stream_name>
+        </field>
+        <field>
+          <column_name>NO_ENTIDADE</column_name>
+          <stream_name>NO_ENTIDADE</stream_name>
+        </field>
+        <field>
+          <column_name>CO_REGIAO</column_name>
+          <stream_name>CO_REGIAO</stream_name>
+        </field>
+        <field>
+          <column_name>CO_MESORREGIAO</column_name>
+          <stream_name>CO_MESORREGIAO</stream_name>
+        </field>
+        <field>
+          <column_name>CO_MICRORREGIAO</column_name>
+          <stream_name>CO_MICRORREGIAO</stream_name>
+        </field>
+        <field>
+          <column_name>CO_UF</column_name>
+          <stream_name>CO_UF</stream_name>
+        </field>
+        <field>
+          <column_name>CO_MUNICIPIO</column_name>
+          <stream_name>CO_MUNICIPIO</stream_name>
+        </field>
+        <field>
+          <column_name>CO_DISTRITO</column_name>
+          <stream_name>CO_DISTRITO</stream_name>
+        </field>
+        <field>
+          <column_name>TP_DEPENDENCIA</column_name>
+          <stream_name>TP_DEPENDENCIA</stream_name>
+        </field>
+        <field>
+          <column_name>TP_LOCALIZACAO</column_name>
+          <stream_name>TP_LOCALIZACAO</stream_name>
+        </field>
+        <field>
+          <column_name>TP_CATEGORIA_ESCOLA_PRIVADA</column_name>
+          <stream_name>TP_CATEGORIA_ESCOLA_PRIVADA</stream_name>
+        </field>
+        <field>
+          <column_name>TP_CONVENIO_PODER_PUBLICO</column_name>
+          <stream_name>TP_CONVENIO_PODER_PUBLICO</stream_name>
+        </field>
+        <field>
+          <column_name>IN_MANT_ESCOLA_PRIVADA_EMP</column_name>
+          <stream_name>IN_MANT_ESCOLA_PRIVADA_EMP</stream_name>
+        </field>
+        <field>
+          <column_name>IN_MANT_ESCOLA_PRIVADA_ONG</column_name>
+          <stream_name>IN_MANT_ESCOLA_PRIVADA_ONG</stream_name>
+        </field>
+        <field>
+          <column_name>IN_MANT_ESCOLA_PRIVADA_SIND</column_name>
+          <stream_name>IN_MANT_ESCOLA_PRIVADA_SIND</stream_name>
+        </field>
+        <field>
+          <column_name>IN_MANT_ESCOLA_PRIVADA_SIST_S</column_name>
+          <stream_name>IN_MANT_ESCOLA_PRIVADA_SIST_S</stream_name>
+        </field>
+        <field>
+          <column_name>IN_MANT_ESCOLA_PRIVADA_S_FINS</column_name>
+          <stream_name>IN_MANT_ESCOLA_PRIVADA_S_FINS</stream_name>
+        </field>
+        <field>
+          <column_name>TP_REGULAMENTACAO</column_name>
+          <stream_name>TP_REGULAMENTACAO</stream_name>
+        </field>
+        <field>
+          <column_name>IN_AGUA_INEXISTENTE</column_name>
+          <stream_name>IN_AGUA_INEXISTENTE</stream_name>
+        </field>
+        <field>
+          <column_name>IN_ENERGIA_INEXISTENTE</column_name>
+          <stream_name>IN_ENERGIA_INEXISTENTE</stream_name>
+        </field>
+        <field>
+          <column_name>IN_ESGOTO_INEXISTENTE</column_name>
+          <stream_name>IN_ESGOTO_INEXISTENTE</stream_name>
+        </field>
+        <field>
+          <column_name>IN_ALIMENTACAO</column_name>
+          <stream_name>IN_ALIMENTACAO</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>757</xloc>
+      <yloc>152</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>
