@@ -1,9 +1,0 @@
-A extração de textos em imagens digitalizadas é feito na linguagem Phyton por meio do OCR-Tesseract (Optical Character Recognition), em que é feita uma análise dos bits do documento a procura de formatos conhecidos de elementos. O Tesseract suporta diversas linguagens e ainda pode aprender novas. Esse tipo de análise tem uma média de 75% de acerto, e pode ser aumentada pela melhora da qualidade de imagem.
-
-Código Phyton:
-
-from PIL import Image # Importa o modulo Pillow para que o codigo reconheca a imagem
-
-import pytesseract # Importa a biblioteca para utilizacao do OCR
-
-print( pytesseract.image_to_string( Image.open('nome_da_imagem.jpg') ) ) # Extrai o texto da imagem
