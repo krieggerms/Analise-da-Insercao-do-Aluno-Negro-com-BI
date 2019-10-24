@@ -152,7 +152,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT DISTINCT&#xd;&#xa;  UF AS CO_UF&#xd;&#xa;, Nome_UF AS NM_UF&#xd;&#xa;FROM tb_base_dtb&#xd;&#xa;</sql>
+    <sql>SELECT&#xd;&#xa;  id&#xd;&#xa;, nome&#xd;&#xa;FROM tb_estados&#xd;&#xa;</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -197,11 +197,11 @@
     <fields>
         <field>
           <column_name>CO_UF</column_name>
-          <stream_name>CO_UF</stream_name>
+          <stream_name>id</stream_name>
         </field>
         <field>
           <column_name>NM_UF</column_name>
-          <stream_name>NM_UF</stream_name>
+          <stream_name>nome</stream_name>
         </field>
     </fields>
      <cluster_schema/>

@@ -106,19 +106,36 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Table input</from><to>If field value is null</to><enabled>N</enabled> </hop>
-  <hop> <from>Table input 2</from><to>If field value is null 2</to><enabled>N</enabled> </hop>
-  <hop> <from>If field value is null 2</from><to>Table output 2</to><enabled>N</enabled> </hop>
-  <hop> <from>If field value is null</from><to>Table output</to><enabled>N</enabled> </hop>
-  <hop> <from>Table input</from><to>Merge Rows &#x28;diff&#x29;</to><enabled>Y</enabled> </hop>
-  <hop> <from>Table input 2</from><to>Merge Rows &#x28;diff&#x29;</to><enabled>N</enabled> </hop>
-  <hop> <from>Table input 3</from><to>Merge Rows &#x28;diff&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Table input</from><to>If field value is null</to><enabled>Y</enabled> </hop>
+  <hop> <from>Table input 2</from><to>If field value is null 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null 2</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Dummy &#x28;do nothing&#x29;</from><to>Table output</to><enabled>Y</enabled> </hop>
   </order>
+  <step>
+    <name>Dummy &#x28;do nothing&#x29;</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>578</xloc>
+      <yloc>373</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
   <step>
     <name>If field value is null</name>
     <type>IfNull</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
          <partitioning>
@@ -256,8 +273,8 @@
       </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>358</xloc>
-      <yloc>254</yloc>
+      <xloc>335</xloc>
+      <yloc>244</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -275,17 +292,131 @@
            </partitioning>
       <replaceAllByValue>-1</replaceAllByValue>
       <replaceAllMask/>
-      <selectFields>N</selectFields>
+      <selectFields>Y</selectFields>
       <selectValuesType>N</selectValuesType>
       <setEmptyStringAll>N</setEmptyStringAll>
     <valuetypes>
       </valuetypes>
     <fields>
+      <field>
+        <name>CO_ENTIDADE</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>NO_ENTIDADE</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>IN_MANT_ESCOLA_PRIVADA_EMP</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>IN_MANT_ESCOLA_PRIVADA_ONG</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>IN_MANT_ESCOLA_PRIVADA_SIND</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>IN_MANT_ESCOLA_PRIVADA_SIST_S</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>IN_MANT_ESCOLA_PRIVADA_S_FINS</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>TP_REGULAMENTACAO</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>IN_AGUA_INEXISTENTE</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>IN_ENERGIA_INEXISTENTE</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>IN_ESGOTO_INEXISTENTE</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>IN_ALIMENTACAO</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>TP_DEPENDENCIA</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>TP_LOCALIZACAO</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>TP_CATEGORIA_ESCOLA_PRIVADA</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>CO_REGIAO</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>CO_MESORREGIAO</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>CO_MICRORREGIAO</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>CO_DISTRITO</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
       </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>354</xloc>
-      <yloc>513</yloc>
+      <xloc>347</xloc>
+      <yloc>528</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -302,7 +433,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT DISTINCT&#xd;&#xa; CO_DISTRITO&#xd;&#xa;FROM tb_escolas&#xd;&#xa;WHERE TP_DEPENDENCIA &#x21;&#x3d; &#x27;4&#x27; AND NU_ANO_CENSO &#x3d; &#x27;2018&#x27;</sql>
+    <sql>SELECT&#xd;&#xa; CO_ENTIDADE&#xd;&#xa;, NO_ENTIDADE&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_EMP&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_ONG&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_SIND&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_SIST_S&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_S_FINS&#xd;&#xa;, TP_REGULAMENTACAO&#xd;&#xa;, IN_AGUA_INEXISTENTE&#xd;&#xa;, IN_ENERGIA_INEXISTENTE&#xd;&#xa;, IN_ESGOTO_INEXISTENTE&#xd;&#xa;, IN_ALIMENTACAO&#xd;&#xa;, TP_DEPENDENCIA&#xd;&#xa;, TP_LOCALIZACAO&#xd;&#xa;, TP_CATEGORIA_ESCOLA_PRIVADA&#xd;&#xa;, CO_REGIAO&#xd;&#xa;, CO_MESORREGIAO&#xd;&#xa;, CO_MICRORREGIAO&#xd;&#xa;, CO_DISTRITO&#xd;&#xa;FROM tb_escolas&#xd;&#xa;WHERE TP_DEPENDENCIA &#x21;&#x3d; &#x27;4&#x27;</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -310,8 +441,8 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>125</xloc>
-      <yloc>332</yloc>
+      <xloc>124</xloc>
+      <yloc>351</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -328,7 +459,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa; CO_ENTIDADE&#xd;&#xa;, NO_ENTIDADE&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_EMP&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_ONG&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_SIND&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_SIST_S&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_S_FINS&#xd;&#xa;, TP_REGULAMENTACAO&#xd;&#xa;, IN_AGUA_INEXISTENTE&#xd;&#xa;, IN_ENERGIA_INEXISTENTE&#xd;&#xa;, IN_ESGOTO_INEXISTENTE&#xd;&#xa;, IN_ALIMENTACAO&#xd;&#xa;, TP_DEPENDENCIA&#xd;&#xa;, TP_LOCALIZACAO&#xd;&#xa;, TP_CATEGORIA_ESCOLA_PRIVADA&#xd;&#xa;, CO_REGIAO&#xd;&#xa;, CO_MESORREGIAO&#xd;&#xa;, CO_MICRORREGIAO&#xd;&#xa;, CO_DISTRITO&#xd;&#xa;FROM tb_escolas&#xd;&#xa;WHERE TP_DEPENDENCIA &#x3d; &#x27;4&#x27; AND NU_ANO_CENSO &#x3d; &#x27;2018&#x27;</sql>
+    <sql>SELECT&#xd;&#xa; CO_ENTIDADE&#xd;&#xa;, NO_ENTIDADE&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_EMP&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_ONG&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_SIND&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_SIST_S&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_S_FINS&#xd;&#xa;, TP_REGULAMENTACAO&#xd;&#xa;, IN_AGUA_INEXISTENTE&#xd;&#xa;, IN_ENERGIA_INEXISTENTE&#xd;&#xa;, IN_ESGOTO_INEXISTENTE&#xd;&#xa;, IN_ALIMENTACAO&#xd;&#xa;, TP_DEPENDENCIA&#xd;&#xa;, TP_LOCALIZACAO&#xd;&#xa;, TP_CATEGORIA_ESCOLA_PRIVADA&#xd;&#xa;, CO_REGIAO&#xd;&#xa;, CO_MESORREGIAO&#xd;&#xa;, CO_MICRORREGIAO&#xd;&#xa;, CO_DISTRITO&#xd;&#xa;FROM tb_escolas&#xd;&#xa;WHERE TP_DEPENDENCIA &#x3d; &#x27;4&#x27;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -336,8 +467,8 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>119</xloc>
-      <yloc>494</yloc>
+      <xloc>124</xloc>
+      <yloc>424</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -356,10 +487,10 @@
     <connection>dw</connection>
     <schema/>
     <table>D_ESCOLA</table>
-    <commit>10</commit>
+    <commit>1000</commit>
     <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
+    <ignore_errors>Y</ignore_errors>
+    <use_batch>N</use_batch>
     <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
@@ -450,178 +581,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>759</xloc>
-      <yloc>284</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Table output 2</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>dw</connection>
-    <schema/>
-    <table>D_ESCOLA</table>
-    <commit>10</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-        <field>
-          <column_name>CO_ENTIDADE</column_name>
-          <stream_name>CO_ENTIDADE</stream_name>
-        </field>
-        <field>
-          <column_name>NO_ENTIDADE</column_name>
-          <stream_name>NO_ENTIDADE</stream_name>
-        </field>
-        <field>
-          <column_name>IN_MANT_ESCOLA_PRIVADA_EMP</column_name>
-          <stream_name>IN_MANT_ESCOLA_PRIVADA_EMP</stream_name>
-        </field>
-        <field>
-          <column_name>IN_MANT_ESCOLA_PRIVADA_ONG</column_name>
-          <stream_name>IN_MANT_ESCOLA_PRIVADA_ONG</stream_name>
-        </field>
-        <field>
-          <column_name>IN_MANT_ESCOLA_PRIVADA_SIND</column_name>
-          <stream_name>IN_MANT_ESCOLA_PRIVADA_SIND</stream_name>
-        </field>
-        <field>
-          <column_name>IN_MANT_ESCOLA_PRIVADA_SIST_S</column_name>
-          <stream_name>IN_MANT_ESCOLA_PRIVADA_SIST_S</stream_name>
-        </field>
-        <field>
-          <column_name>IN_MANT_ESCOLA_PRIVADA_S_FINS</column_name>
-          <stream_name>IN_MANT_ESCOLA_PRIVADA_S_FINS</stream_name>
-        </field>
-        <field>
-          <column_name>TP_REGULAMENTACAO</column_name>
-          <stream_name>TP_REGULAMENTACAO</stream_name>
-        </field>
-        <field>
-          <column_name>IN_AGUA_INEXISTENTE</column_name>
-          <stream_name>IN_AGUA_INEXISTENTE</stream_name>
-        </field>
-        <field>
-          <column_name>IN_ENERGIA_INEXISTENTE</column_name>
-          <stream_name>IN_ENERGIA_INEXISTENTE</stream_name>
-        </field>
-        <field>
-          <column_name>IN_ESGOTO_INEXISTENTE</column_name>
-          <stream_name>IN_ESGOTO_INEXISTENTE</stream_name>
-        </field>
-        <field>
-          <column_name>IN_ALIMENTACAO</column_name>
-          <stream_name>IN_ALIMENTACAO</stream_name>
-        </field>
-        <field>
-          <column_name>FK_D_DEPENDENCIA_TP_DEPENDENCIA</column_name>
-          <stream_name>TP_DEPENDENCIA</stream_name>
-        </field>
-        <field>
-          <column_name>FK_D_LOCALIZACAO_TP_LOCALIZACAO</column_name>
-          <stream_name>TP_LOCALIZACAO</stream_name>
-        </field>
-        <field>
-          <column_name>FK_D_CATEGORIA_ESCOLA_PRIVADA_TP_CATEGORIA_ESCOLA_PRIVADA</column_name>
-          <stream_name>TP_CATEGORIA_ESCOLA_PRIVADA</stream_name>
-        </field>
-        <field>
-          <column_name>FK_D_REGIAO_CO_REGIAO</column_name>
-          <stream_name>CO_REGIAO</stream_name>
-        </field>
-        <field>
-          <column_name>FK_D_MESORREGIAO_CO_MESORREGIAO</column_name>
-          <stream_name>CO_MESORREGIAO</stream_name>
-        </field>
-        <field>
-          <column_name>FK_D_MICRORREGIAO_CO_MICRORREGIAO</column_name>
-          <stream_name>CO_MICRORREGIAO</stream_name>
-        </field>
-        <field>
-          <column_name>FK_D_DISTRITO_CO_DISTRITO</column_name>
-          <stream_name>CO_DISTRITO</stream_name>
-        </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>748</xloc>
-      <yloc>506</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Merge Rows &#x28;diff&#x29;</name>
-    <type>MergeRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <keys>
-      <key>CO_DISTRITO</key>
-    </keys>
-    <values>
-      <value>CO_DISTRITO</value>
-    </values>
-<flag_field>flagfield</flag_field>
-<reference>Table input 3</reference>
-<compare>Table input</compare>
-    <compare>
-    </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>415</xloc>
-      <yloc>365</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Table input 3</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>dw</connection>
-    <sql>SELECT&#xd;&#xa;  CO_DISTRITO&#xd;&#xa;FROM D_DISTRITO&#xd;&#xa;</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>123</xloc>
-      <yloc>427</yloc>
+      <xloc>731</xloc>
+      <yloc>373</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

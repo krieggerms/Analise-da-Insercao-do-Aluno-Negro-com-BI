@@ -152,7 +152,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT DISTINCT&#xd;&#xa; Codigo_de_Distrito_Completo&#xd;&#xa;, Nome_Distrito&#xd;&#xa;FROM tb_base_dtb&#xd;&#xa;</sql>
+    <sql>SELECT&#xd;&#xa;  id&#xd;&#xa;, nome&#xd;&#xa;FROM tb_distritos&#xd;&#xa;</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -197,11 +197,11 @@
     <fields>
         <field>
           <column_name>CO_DISTRITO</column_name>
-          <stream_name>Codigo_de_Distrito_Completo</stream_name>
+          <stream_name>id</stream_name>
         </field>
         <field>
           <column_name>NM_DISTRITO</column_name>
-          <stream_name>Nome_Distrito</stream_name>
+          <stream_name>nome</stream_name>
         </field>
     </fields>
      <cluster_schema/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>t_d_microrregiao</name>
+    <name>t_d_estado</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -124,7 +124,7 @@
     <single_statement>Y</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>INSERT INTO D_MICRORREGIAO &#x28;CO_MICRORREGIAO, NM_MICRORREGIAO&#x29; VALUES &#x28;&#x27;-1&#x27;, &#x27;MICRORREGIAO NULA&#x27;&#x29;&#x3b;</sql>
+    <sql>INSERT INTO D_DISTRITO &#x28;CO_DISTRITO, NM_DISTRITO&#x29; VALUES &#x28;&#x27;-1&#x27;, &#x27;DISTRITO NULO&#x27;&#x29;&#x3b;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -152,7 +152,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa;  id&#xd;&#xa;, nome&#xd;&#xa;FROM tb_microrregiao&#xd;&#xa;</sql>
+    <sql>SELECT&#xd;&#xa;  id&#xd;&#xa;, nome&#xd;&#xa;FROM tb_distritos&#xd;&#xa;</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -161,7 +161,7 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>196</xloc>
-      <yloc>204</yloc>
+      <yloc>205</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -179,7 +179,7 @@
            </partitioning>
     <connection>dw</connection>
     <schema/>
-    <table>D_MICRORREGIAO</table>
+    <table>D_DISTRITO</table>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
@@ -196,11 +196,11 @@
     <return_field/>
     <fields>
         <field>
-          <column_name>CO_MICRORREGIAO</column_name>
+          <column_name>CO_DISTRITO</column_name>
           <stream_name>id</stream_name>
         </field>
         <field>
-          <column_name>NM_MICRORREGIAO</column_name>
+          <column_name>NM_DISTRITO</column_name>
           <stream_name>nome</stream_name>
         </field>
     </fields>

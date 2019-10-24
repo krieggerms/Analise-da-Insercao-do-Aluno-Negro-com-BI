@@ -82,8 +82,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>30</xloc>
-      <yloc>499</yloc>
+      <xloc>19</xloc>
+      <yloc>215</yloc>
       </entry>
     <entry>
       <name>ano</name>
@@ -115,8 +115,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>15</xloc>
-      <yloc>191</yloc>
+      <xloc>89</xloc>
+      <yloc>295</yloc>
       </entry>
     <entry>
       <name>categoria_escolar_privada</name>
@@ -148,8 +148,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>153</xloc>
-      <yloc>185</yloc>
+      <xloc>238</xloc>
+      <yloc>293</yloc>
       </entry>
     <entry>
       <name>cor_raca</name>
@@ -181,8 +181,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>352</xloc>
-      <yloc>190</yloc>
+      <xloc>402</xloc>
+      <yloc>299</yloc>
       </entry>
     <entry>
       <name>dependencia</name>
@@ -214,8 +214,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>603</xloc>
-      <yloc>65</yloc>
+      <xloc>628</xloc>
+      <yloc>219</yloc>
       </entry>
     <entry>
       <name>escola</name>
@@ -247,8 +247,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1273</xloc>
-      <yloc>384</yloc>
+      <xloc>1333</xloc>
+      <yloc>219</yloc>
       </entry>
     <entry>
       <name>etapa_ensino</name>
@@ -280,8 +280,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>734</xloc>
-      <yloc>198</yloc>
+      <xloc>710</xloc>
+      <yloc>300</yloc>
       </entry>
     <entry>
       <name>mediacao_didatico_pedago</name>
@@ -313,8 +313,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>549</xloc>
-      <yloc>186</yloc>
+      <xloc>553</xloc>
+      <yloc>297</yloc>
       </entry>
     <entry>
       <name>nacionalidade</name>
@@ -346,8 +346,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>428</xloc>
-      <yloc>65</yloc>
+      <xloc>469</xloc>
+      <yloc>221</yloc>
       </entry>
     <entry>
       <name>sexo</name>
@@ -379,8 +379,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>89</xloc>
-      <yloc>88</yloc>
+      <xloc>164</xloc>
+      <yloc>218</yloc>
       </entry>
     <entry>
       <name>zona_residencial</name>
@@ -412,8 +412,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>222</xloc>
-      <yloc>83</yloc>
+      <xloc>314</xloc>
+      <yloc>220</yloc>
       </entry>
     <entry>
       <name>aluno</name>
@@ -445,8 +445,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1397</xloc>
-      <yloc>389</yloc>
+      <xloc>1432</xloc>
+      <yloc>295</yloc>
       </entry>
     <entry>
       <name>Success</name>
@@ -455,8 +455,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1389</xloc>
-      <yloc>555</yloc>
+      <xloc>1516</xloc>
+      <yloc>220</yloc>
       </entry>
     <entry>
       <name>pais</name>
@@ -488,8 +488,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>771</xloc>
-      <yloc>65</yloc>
+      <xloc>754</xloc>
+      <yloc>216</yloc>
       </entry>
     <entry>
       <name>uf</name>
@@ -521,8 +521,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>970</xloc>
-      <yloc>65</yloc>
+      <xloc>880</xloc>
+      <yloc>215</yloc>
       </entry>
     <entry>
       <name>municipio</name>
@@ -554,8 +554,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>880</xloc>
-      <yloc>191</yloc>
+      <xloc>812</xloc>
+      <yloc>301</yloc>
       </entry>
     <entry>
       <name>localizacao</name>
@@ -587,8 +587,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1330</xloc>
-      <yloc>70</yloc>
+      <xloc>1166</xloc>
+      <yloc>220</yloc>
       </entry>
     <entry>
       <name>mesorregiao</name>
@@ -620,8 +620,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1077</xloc>
-      <yloc>187</yloc>
+      <xloc>931</xloc>
+      <yloc>298</yloc>
       </entry>
     <entry>
       <name>microrregiao</name>
@@ -653,8 +653,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1224</xloc>
-      <yloc>189</yloc>
+      <xloc>1080</xloc>
+      <yloc>297</yloc>
       </entry>
     <entry>
       <name>distrito</name>
@@ -686,8 +686,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1168</xloc>
-      <yloc>62</yloc>
+      <xloc>1004</xloc>
+      <yloc>216</yloc>
       </entry>
     <entry>
       <name>regiao</name>
@@ -719,8 +719,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1394</xloc>
-      <yloc>186</yloc>
+      <xloc>1247</xloc>
+      <yloc>297</yloc>
       </entry>
   </entries>
   <hops>
