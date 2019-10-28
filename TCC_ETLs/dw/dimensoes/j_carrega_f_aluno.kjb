@@ -82,8 +82,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>101</xloc>
-      <yloc>329</yloc>
+      <xloc>333</xloc>
+      <yloc>343</yloc>
       </entry>
     <entry>
       <name>ano</name>
@@ -115,8 +115,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>464</xloc>
-      <yloc>155</yloc>
+      <xloc>459</xloc>
+      <yloc>195</yloc>
       </entry>
     <entry>
       <name>escola</name>
@@ -148,8 +148,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>696</xloc>
-      <yloc>154</yloc>
+      <xloc>690</xloc>
+      <yloc>192</yloc>
       </entry>
     <entry>
       <name>aluno</name>
@@ -181,8 +181,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>837</xloc>
-      <yloc>303</yloc>
+      <xloc>821</xloc>
+      <yloc>328</yloc>
       </entry>
     <entry>
       <name>Success</name>
@@ -191,8 +191,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1172</xloc>
-      <yloc>129</yloc>
+      <xloc>919</xloc>
+      <yloc>190</yloc>
       </entry>
     <entry>
       <name>localidade</name>
@@ -224,8 +224,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>524</xloc>
-      <yloc>333</yloc>
+      <xloc>573</xloc>
+      <yloc>335</yloc>
       </entry>
   </entries>
   <hops>
