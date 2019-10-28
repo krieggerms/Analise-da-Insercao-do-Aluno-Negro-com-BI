@@ -179,7 +179,7 @@
            </partitioning>
     <connection>dw</connection>
     <schema/>
-    <table>D_MESORREGIAO</table>
+    <table>D_LOCALIDADE</table>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
