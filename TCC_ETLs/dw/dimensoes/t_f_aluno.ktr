@@ -457,7 +457,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa; ID_ALUNO,&#xd;&#xa; IN_NECESSIDADE_ESPECIAL,&#xd;&#xa; NU_IDADE_REFERENCIA,&#xd;&#xa; TP_MEDIACAO_DIDATICO_PEDAGO,&#xd;&#xa; TP_SEXO,&#xd;&#xa; TP_ETAPA_ENSINO,&#xd;&#xa; TP_NACIONALIDADE,&#xd;&#xa; TP_COR_RACA,&#xd;&#xa; NU_ANO_CENSO,&#xd;&#xa; CO_ENTIDADE,&#xd;&#xa; TP_ZONA_RESIDENCIAL,&#xd;&#xa; CO_UF_NASC,&#xd;&#xa; CO_MUNICIPIO_NASC,&#xd;&#xa; CO_UF_END,&#xd;&#xa; CO_MUNICIPIO_END,&#xd;&#xa; CO_PAIS_ORIGEM&#xd;&#xa;FROM tb_matricula&#xd;&#xa;WHERE CO_PAIS_ORIGEM &#x3d; &#x27;76&#x27;&#xd;&#xa;</sql>
+    <sql>SELECT&#xd;&#xa; ID_ALUNO,&#xd;&#xa; IN_NECESSIDADE_ESPECIAL,&#xd;&#xa; NU_IDADE_REFERENCIA,&#xd;&#xa; TP_MEDIACAO_DIDATICO_PEDAGO,&#xd;&#xa; TP_SEXO,&#xd;&#xa; TP_ETAPA_ENSINO,&#xd;&#xa; TP_NACIONALIDADE,&#xd;&#xa; TP_COR_RACA,&#xd;&#xa; NU_ANO_CENSO,&#xd;&#xa; CO_ENTIDADE,&#xd;&#xa; TP_ZONA_RESIDENCIAL,&#xd;&#xa; CO_UF_NASC,&#xd;&#xa; CO_MUNICIPIO_NASC,&#xd;&#xa; CO_UF_END,&#xd;&#xa; CO_MUNICIPIO_END,&#xd;&#xa; CO_PAIS_ORIGEM&#xd;&#xa;FROM tb_matricula&#xd;&#xa;WHERE CO_PAIS_ORIGEM &#x3d; &#x27;76&#x27; AND NU_ANO_CENSO &#x3d; &#x27;2017&#x27;&#xd;&#xa;</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -483,7 +483,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa; ID_ALUNO,&#xd;&#xa; IN_NECESSIDADE_ESPECIAL,&#xd;&#xa; NU_IDADE_REFERENCIA,&#xd;&#xa; TP_MEDIACAO_DIDATICO_PEDAGO,&#xd;&#xa; TP_SEXO,&#xd;&#xa; TP_ETAPA_ENSINO,&#xd;&#xa; TP_NACIONALIDADE,&#xd;&#xa; TP_COR_RACA,&#xd;&#xa; NU_ANO_CENSO,&#xd;&#xa; CO_ENTIDADE,&#xd;&#xa; TP_ZONA_RESIDENCIAL,&#xd;&#xa; CO_UF_NASC,&#xd;&#xa; CO_MUNICIPIO_NASC,&#xd;&#xa; CO_UF_END,&#xd;&#xa; CO_MUNICIPIO_END,&#xd;&#xa; CO_PAIS_ORIGEM&#xd;&#xa;FROM tb_matricula&#xd;&#xa;WHERE CO_PAIS_ORIGEM &#x21;&#x3d; &#x27;76&#x27;&#xd;&#xa;</sql>
+    <sql>SELECT&#xd;&#xa; ID_ALUNO,&#xd;&#xa; IN_NECESSIDADE_ESPECIAL,&#xd;&#xa; NU_IDADE_REFERENCIA,&#xd;&#xa; TP_MEDIACAO_DIDATICO_PEDAGO,&#xd;&#xa; TP_SEXO,&#xd;&#xa; TP_ETAPA_ENSINO,&#xd;&#xa; TP_NACIONALIDADE,&#xd;&#xa; TP_COR_RACA,&#xd;&#xa; NU_ANO_CENSO,&#xd;&#xa; CO_ENTIDADE,&#xd;&#xa; TP_ZONA_RESIDENCIAL,&#xd;&#xa; CO_UF_NASC,&#xd;&#xa; CO_MUNICIPIO_NASC,&#xd;&#xa; CO_UF_END,&#xd;&#xa; CO_MUNICIPIO_END,&#xd;&#xa; CO_PAIS_ORIGEM&#xd;&#xa;FROM tb_matricula&#xd;&#xa;WHERE CO_PAIS_ORIGEM &#x21;&#x3d; &#x27;76&#x27; AND NU_ANO_CENSO &#x3d; &#x27;2017&#x27;&#xd;&#xa;</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -513,8 +513,8 @@
     <table>F_ALUNO</table>
     <commit>10000</commit>
     <truncate>N</truncate>
-    <ignore_errors>Y</ignore_errors>
-    <use_batch>N</use_batch>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
     <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
@@ -539,48 +539,56 @@
           <stream_name>NU_IDADE_REFERENCIA</stream_name>
         </field>
         <field>
-          <column_name>FK_D_MEDIACAO_DIDATICO_PEDAGO_TP_MEDIACAO_DIDATICO_PEDAGO</column_name>
-          <stream_name>TP_MEDIACAO_DIDATICO_PEDAGO</stream_name>
-        </field>
-        <field>
-          <column_name>FK_D_SEXO_TP_SEXO</column_name>
-          <stream_name>TP_SEXO</stream_name>
-        </field>
-        <field>
-          <column_name>FK_D_ETAPA_ENSINO_TP_ETAPA_ENSINO</column_name>
-          <stream_name>TP_ETAPA_ENSINO</stream_name>
-        </field>
-        <field>
-          <column_name>FK_D_NACIONALIDADE_TP_NACIONALIDADE</column_name>
-          <stream_name>TP_NACIONALIDADE</stream_name>
-        </field>
-        <field>
-          <column_name>FK_D_COR_RACA_TP_COR_RACA</column_name>
-          <stream_name>TP_COR_RACA</stream_name>
-        </field>
-        <field>
-          <column_name>FK_D_ANO_ID_ANO_CENSO</column_name>
-          <stream_name>NU_ANO_CENSO</stream_name>
-        </field>
-        <field>
-          <column_name>FK_D_ZONA_RESIDENCIAL_TP_ZONA_RESIDENCIAL</column_name>
-          <stream_name>TP_ZONA_RESIDENCIAL</stream_name>
-        </field>
-        <field>
           <column_name>FK_D_ESCOLA_CO_ENTIDADE</column_name>
           <stream_name>CO_ENTIDADE</stream_name>
         </field>
         <field>
-          <column_name>FK_D_UF_CO_UF</column_name>
+          <column_name>TP_SEXO</column_name>
+          <stream_name>TP_SEXO</stream_name>
+        </field>
+        <field>
+          <column_name>TP_MEDIACAO_DIDATICO_PEDAGO</column_name>
+          <stream_name>TP_MEDIACAO_DIDATICO_PEDAGO</stream_name>
+        </field>
+        <field>
+          <column_name>TP_ETAPA_ENSINO</column_name>
+          <stream_name>TP_ETAPA_ENSINO</stream_name>
+        </field>
+        <field>
+          <column_name>TP_NACIONALIDADE</column_name>
+          <stream_name>TP_NACIONALIDADE</stream_name>
+        </field>
+        <field>
+          <column_name>TP_COR_RACA</column_name>
+          <stream_name>TP_COR_RACA</stream_name>
+        </field>
+        <field>
+          <column_name>TP_ZONA_RESIDENCIAL</column_name>
+          <stream_name>TP_ZONA_RESIDENCIAL</stream_name>
+        </field>
+        <field>
+          <column_name>FK_D_LOCALIDADE_CO_UF</column_name>
           <stream_name>CO_UF_NASC</stream_name>
         </field>
         <field>
-          <column_name>FK_D_MUNICIPIO_CO_MUNICIPIO</column_name>
+          <column_name>FK_D_LOCALIDADE_CO_MUNICIPIO</column_name>
           <stream_name>CO_MUNICIPIO_NASC</stream_name>
         </field>
         <field>
-          <column_name>FK_D_PAIS_CO_PAIS_ORIGEM</column_name>
+          <column_name>FK_D_LOCALIDADE_CO_REGIAO</column_name>
+          <stream_name>CO_UF_END</stream_name>
+        </field>
+        <field>
+          <column_name>FK_D_LOCALIDADE_CO_MESORREGIAO</column_name>
+          <stream_name>CO_MUNICIPIO_END</stream_name>
+        </field>
+        <field>
+          <column_name>FK_D_LOCALIDADE_CO_PAIS_ORIGEM</column_name>
           <stream_name>CO_PAIS_ORIGEM</stream_name>
+        </field>
+        <field>
+          <column_name>FK_D_TEMPO_ID_ANO_CENSO</column_name>
+          <stream_name>NU_ANO_CENSO</stream_name>
         </field>
     </fields>
      <cluster_schema/>

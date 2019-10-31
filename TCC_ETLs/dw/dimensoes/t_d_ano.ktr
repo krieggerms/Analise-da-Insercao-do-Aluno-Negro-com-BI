@@ -170,7 +170,7 @@
            </partitioning>
     <connection>dw</connection>
     <schema/>
-    <table>D_ANO</table>
+    <table>D_TEMPO</table>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>

@@ -433,7 +433,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa; CO_ENTIDADE&#xd;&#xa;, NO_ENTIDADE&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_EMP&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_ONG&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_SIND&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_SIST_S&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_S_FINS&#xd;&#xa;, TP_REGULAMENTACAO&#xd;&#xa;, IN_AGUA_INEXISTENTE&#xd;&#xa;, IN_ENERGIA_INEXISTENTE&#xd;&#xa;, IN_ESGOTO_INEXISTENTE&#xd;&#xa;, IN_ALIMENTACAO&#xd;&#xa;, TP_DEPENDENCIA&#xd;&#xa;, TP_LOCALIZACAO&#xd;&#xa;, TP_CATEGORIA_ESCOLA_PRIVADA&#xd;&#xa;, CO_REGIAO&#xd;&#xa;, CO_MESORREGIAO&#xd;&#xa;, CO_MICRORREGIAO&#xd;&#xa;, CO_DISTRITO&#xd;&#xa;FROM tb_escolas&#xd;&#xa;WHERE TP_DEPENDENCIA &#x21;&#x3d; &#x27;4&#x27;</sql>
+    <sql>SELECT&#xd;&#xa; CO_ENTIDADE&#xd;&#xa;, NO_ENTIDADE&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_EMP&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_ONG&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_SIND&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_SIST_S&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_S_FINS&#xd;&#xa;, TP_REGULAMENTACAO&#xd;&#xa;, IN_AGUA_INEXISTENTE&#xd;&#xa;, IN_ENERGIA_INEXISTENTE&#xd;&#xa;, IN_ESGOTO_INEXISTENTE&#xd;&#xa;, IN_ALIMENTACAO&#xd;&#xa;, TP_DEPENDENCIA&#xd;&#xa;, TP_LOCALIZACAO&#xd;&#xa;, TP_CATEGORIA_ESCOLA_PRIVADA&#xd;&#xa;, CO_REGIAO&#xd;&#xa;, CO_MESORREGIAO&#xd;&#xa;, CO_MICRORREGIAO&#xd;&#xa;, CO_DISTRITO&#xd;&#xa;FROM tb_escolas&#xd;&#xa;WHERE TP_DEPENDENCIA &#x21;&#x3d; &#x27;4&#x27; AND NU_ANO_CENSO &#x3d; &#x27;2016&#x27;</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -459,7 +459,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa; CO_ENTIDADE&#xd;&#xa;, NO_ENTIDADE&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_EMP&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_ONG&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_SIND&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_SIST_S&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_S_FINS&#xd;&#xa;, TP_REGULAMENTACAO&#xd;&#xa;, IN_AGUA_INEXISTENTE&#xd;&#xa;, IN_ENERGIA_INEXISTENTE&#xd;&#xa;, IN_ESGOTO_INEXISTENTE&#xd;&#xa;, IN_ALIMENTACAO&#xd;&#xa;, TP_DEPENDENCIA&#xd;&#xa;, TP_LOCALIZACAO&#xd;&#xa;, TP_CATEGORIA_ESCOLA_PRIVADA&#xd;&#xa;, CO_REGIAO&#xd;&#xa;, CO_MESORREGIAO&#xd;&#xa;, CO_MICRORREGIAO&#xd;&#xa;, CO_DISTRITO&#xd;&#xa;FROM tb_escolas&#xd;&#xa;WHERE TP_DEPENDENCIA &#x3d; &#x27;4&#x27;</sql>
+    <sql>SELECT&#xd;&#xa; CO_ENTIDADE&#xd;&#xa;, NO_ENTIDADE&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_EMP&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_ONG&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_SIND&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_SIST_S&#xd;&#xa;, IN_MANT_ESCOLA_PRIVADA_S_FINS&#xd;&#xa;, TP_REGULAMENTACAO&#xd;&#xa;, IN_AGUA_INEXISTENTE&#xd;&#xa;, IN_ENERGIA_INEXISTENTE&#xd;&#xa;, IN_ESGOTO_INEXISTENTE&#xd;&#xa;, IN_ALIMENTACAO&#xd;&#xa;, TP_DEPENDENCIA&#xd;&#xa;, TP_LOCALIZACAO&#xd;&#xa;, TP_CATEGORIA_ESCOLA_PRIVADA&#xd;&#xa;, CO_REGIAO&#xd;&#xa;, CO_MESORREGIAO&#xd;&#xa;, CO_MICRORREGIAO&#xd;&#xa;, CO_DISTRITO&#xd;&#xa;FROM tb_escolas&#xd;&#xa;WHERE TP_DEPENDENCIA &#x3d; &#x27;4&#x27; AND NU_ANO_CENSO &#x3d; &#x27;2016&#x27;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -487,10 +487,10 @@
     <connection>dw</connection>
     <schema/>
     <table>D_ESCOLA</table>
-    <commit>1000</commit>
+    <commit>10000</commit>
     <truncate>N</truncate>
-    <ignore_errors>Y</ignore_errors>
-    <use_batch>N</use_batch>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
     <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
@@ -551,31 +551,31 @@
           <stream_name>IN_ALIMENTACAO</stream_name>
         </field>
         <field>
-          <column_name>FK_D_DEPENDENCIA_TP_DEPENDENCIA</column_name>
+          <column_name>TP_DEPENDENCIA</column_name>
           <stream_name>TP_DEPENDENCIA</stream_name>
         </field>
         <field>
-          <column_name>FK_D_LOCALIZACAO_TP_LOCALIZACAO</column_name>
+          <column_name>TP_LOCALIZACAO</column_name>
           <stream_name>TP_LOCALIZACAO</stream_name>
         </field>
         <field>
-          <column_name>FK_D_CATEGORIA_ESCOLA_PRIVADA_TP_CATEGORIA_ESCOLA_PRIVADA</column_name>
+          <column_name>TP_CATEGORIA_ESCOLA_PRIVADA</column_name>
           <stream_name>TP_CATEGORIA_ESCOLA_PRIVADA</stream_name>
         </field>
         <field>
-          <column_name>FK_D_REGIAO_CO_REGIAO</column_name>
+          <column_name>FK_D_LOCALIDADE_CO_REGIAO</column_name>
           <stream_name>CO_REGIAO</stream_name>
         </field>
         <field>
-          <column_name>FK_D_MESORREGIAO_CO_MESORREGIAO</column_name>
+          <column_name>FK_D_LOCALIDADE_CO_MESORREGIAO</column_name>
           <stream_name>CO_MESORREGIAO</stream_name>
         </field>
         <field>
-          <column_name>FK_D_MICRORREGIAO_CO_MICRORREGIAO</column_name>
+          <column_name>FK_D_LOCALIDADE_CO_MICRORREGIAO</column_name>
           <stream_name>CO_MICRORREGIAO</stream_name>
         </field>
         <field>
-          <column_name>FK_D_DISTRITO_CO_DISTRITO</column_name>
+          <column_name>FK_D_LOCALIDADE_CO_DISTRITO</column_name>
           <stream_name>CO_DISTRITO</stream_name>
         </field>
     </fields>
