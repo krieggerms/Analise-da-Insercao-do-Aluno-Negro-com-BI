@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>t_d_localidade</name>
+    <name>t_d_localidade_municipio</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -106,34 +106,70 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>regiao</from><to>Sort regiao</to><enabled>Y</enabled> </hop>
-  <hop> <from>uf</from><to>Sort uf</to><enabled>Y</enabled> </hop>
   <hop> <from>pais</from><to>Sort pais</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort pais</from><to>Merge pais_regiao</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort regiao</from><to>Merge pais_regiao</to><enabled>Y</enabled> </hop>
-  <hop> <from>Merge pais_regiao</from><to>Sort pais_regiao</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort pais_regiao</from><to>Merge regiao_uf</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort uf</from><to>Merge regiao_uf</to><enabled>Y</enabled> </hop>
-  <hop> <from>mesorregiao</from><to>Sort mesorregiao</to><enabled>Y</enabled> </hop>
-  <hop> <from>Merge regiao_uf</from><to>Sort regiao_uf</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort regiao_uf</from><to>Merge uf_mesorregiao</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort mesorregiao</from><to>Merge uf_mesorregiao</to><enabled>Y</enabled> </hop>
-  <hop> <from>microrregiao</from><to>Sort microrregiao</to><enabled>Y</enabled> </hop>
-  <hop> <from>Merge uf_mesorregiao</from><to>Sort uf_mesorregiao</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort microrregiao</from><to>Merge mesorregiao_microrregiao</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort uf_mesorregiao</from><to>Merge mesorregiao_microrregiao</to><enabled>Y</enabled> </hop>
-  <hop> <from>Merge mesorregiao_microrregiao</from><to>Sort mesorregiao_microrregiao</to><enabled>Y</enabled> </hop>
   <hop> <from>municipio</from><to>Sort municipio</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort mesorregiao_microrregiao</from><to>Merge microrregiao_municipio</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort municipio</from><to>Merge microrregiao_municipio</to><enabled>Y</enabled> </hop>
-  <hop> <from>distrito</from><to>Sort distrito</to><enabled>Y</enabled> </hop>
-  <hop> <from>Merge microrregiao_municipio</from><to>Sort microrregiao_municipio</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort distrito</from><to>Merge municipio_distrito</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort microrregiao_municipio</from><to>Merge municipio_distrito</to><enabled>Y</enabled> </hop>
-  <hop> <from>Merge municipio_distrito</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort municipio</from><to>Merge municipio_uf</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort uf</from><to>Merge municipio_uf</to><enabled>Y</enabled> </hop>
+  <hop> <from>Merge municipio_uf</from><to>Sort municipio_uf</to><enabled>Y</enabled> </hop>
+  <hop> <from>uf</from><to>Add constants</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add constants</from><to>Sort uf</to><enabled>Y</enabled> </hop>
   <hop> <from>Select values</from><to>If field value is null</to><enabled>Y</enabled> </hop>
-  <hop> <from>If field value is null</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null</from><to>Sort rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort pais_uf</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort pais</from><to>Join Rows &#x28;cartesian product&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort municipio_uf</from><to>Join Rows &#x28;cartesian product&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort municipio_uf</from><to>Merge pais_uf</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort pais</from><to>Merge pais_uf</to><enabled>Y</enabled> </hop>
+  <hop> <from>Merge pais_uf</from><to>Sort pais_uf</to><enabled>Y</enabled> </hop>
+  <hop> <from>Join Rows &#x28;cartesian product&#x29;</from><to>Sort cartesian</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort cartesian</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows</from><to>Table output</to><enabled>Y</enabled> </hop>
   </order>
+  <step>
+    <name>Add constants</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>CO_PAIS</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>76</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>NM_PAIS</name>
+        <type/>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>BRASIL</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>193</xloc>
+      <yloc>186</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
   <step>
     <name>Execute SQL script</name>
     <type>ExecSQL</type>
@@ -147,10 +183,10 @@
            </partitioning>
     <connection>dw</connection>
     <execute_each_row>N</execute_each_row>
-    <single_statement>N</single_statement>
+    <single_statement>Y</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>INSERT INTO D_LOCALIDADE&#x28;&#x5b;CO_REGIAO&#x5d;&#xd;&#xa;						,&#x5b;NM_REGIAO&#x5d;&#xd;&#xa;           				,&#x5b;CO_MESORREGIAO&#x5d;&#xd;&#xa;           				,&#x5b;NM_MESORREGIAO&#x5d;&#xd;&#xa;           				,&#x5b;CO_MUNICIPIO&#x5d;&#xd;&#xa;           				,&#x5b;NM_MUNICIPIO&#x5d;&#xd;&#xa;           				,&#x5b;CO_MICRORREGIAO&#x5d;&#xd;&#xa;           				,&#x5b;NM_MICRORREGIAO&#x5d;&#xd;&#xa;           				,&#x5b;CO_UF&#x5d;&#xd;&#xa;						,&#x5b;NM_UF&#x5d;&#xd;&#xa;           				,&#x5b;CO_DISTRITO&#x5d;&#xd;&#xa;           				,&#x5b;NM_DISTRITO&#x5d;&#xd;&#xa;           				,&#x5b;CO_PAIS_ORIGEM&#x5d;&#xd;&#xa;           				,&#x5b;NM_PAIS_ORIGEM&#x5d;&#x29; &#xd;&#xa;VALUES &#xd;&#xa;	&#x28;&#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;, &#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;, &#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;, &#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;, &#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;, &#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;, &#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;&#x29; </sql>
+    <sql>INSERT INTO D_LOCALIDADE_MUNICIPIO &#x28;CO_MUNICIPIO, NM_MUNICIPIO, CO_UF, NM_UF, CO_PAIS_ORIGEM, NM_PAIS_ORIGEM&#x29; &#xd;&#xa;VALUES  &#xd;&#xa;&#x28;&#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;, &#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;, &#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;&#x29;,  &#xd;&#xa;&#x28;&#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;, &#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;, &#x27;76&#x27;, &#x27;BRASIL&#x27;&#x29;,&#xd;&#xa;&#x28;&#x27;-3&#x27;, &#x27;NATURALIZADO&#x2f;NASCIDO NO EXTERIOR&#x27;, &#x27;-3&#x27;, &#x27;NATURALIZADO&#x2f;NASCIDO NO EXTERIOR&#x27;, &#x27;76&#x27;, &#x27;BRASIL&#x27;&#x29;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -160,8 +196,8 @@
     </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1510</xloc>
-      <yloc>381</yloc>
+      <xloc>985</xloc>
+      <yloc>383</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -177,7 +213,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-      <replaceAllByValue>-2</replaceAllByValue>
+      <replaceAllByValue/>
       <replaceAllMask/>
       <selectFields>Y</selectFields>
       <selectValuesType>N</selectValuesType>
@@ -198,18 +234,6 @@
         <set_empty_string>N</set_empty_string>
         </field>
       <field>
-        <name>CO_REGIAO</name>
-        <value>-2</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-        </field>
-      <field>
-        <name>NM_REGIAO</name>
-        <value>PAIS ESTRANGEIRO</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-        </field>
-      <field>
         <name>CO_UF</name>
         <value>-2</value>
         <mask/>
@@ -217,30 +241,6 @@
         </field>
       <field>
         <name>NM_UF</name>
-        <value>PAIS ESTRANGEIRO</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-        </field>
-      <field>
-        <name>CO_MESORREGIAO</name>
-        <value>-2</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-        </field>
-      <field>
-        <name>NM_MESORREGIAO</name>
-        <value>PAIS ESTRANGEIRO</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-        </field>
-      <field>
-        <name>CO_MICRORREGIAO</name>
-        <value>-2</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-        </field>
-      <field>
-        <name>NM_MICRORREGIAO</name>
         <value>PAIS ESTRANGEIRO</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
@@ -257,30 +257,18 @@
         <mask/>
         <set_empty_string>N</set_empty_string>
         </field>
-      <field>
-        <name>CO_DISTRITO</name>
-        <value>-2</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-        </field>
-      <field>
-        <name>NM_DISTRITO</name>
-        <value>PAIS ESTRANGEIRO</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-        </field>
       </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1502</xloc>
-      <yloc>282</yloc>
+      <xloc>977</xloc>
+      <yloc>188</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Merge mesorregiao_microrregiao</name>
-    <type>MergeJoin</type>
+    <name>Join Rows &#x28;cartesian product&#x29;</name>
+    <type>JoinRows</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -289,25 +277,56 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-<join_type>FULL OUTER</join_type>
-<step1>Sort microrregiao</step1>
-<step2>Sort uf_mesorregiao</step2>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <cache_size>500</cache_size>
+      <main>Sort municipio_uf</main>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue/>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>544</xloc>
+      <yloc>395</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Merge municipio_uf</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<join_type>INNER</join_type>
+<step1>Sort municipio</step1>
+<step2>Sort uf</step2>
     <keys_1>
-      <key>CO_MESORREGIAO</key>
+      <key>CO_UF</key>
     </keys_1>
     <keys_2>
-      <key>CO_MESORREGIAO</key>
+      <key>CO_UF</key>
     </keys_2>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>884</xloc>
-      <yloc>316</yloc>
+      <xloc>121</xloc>
+      <yloc>404</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Merge microrregiao_municipio</name>
+    <name>Merge pais_uf</name>
     <type>MergeJoin</type>
     <description/>
     <distribute>Y</distribute>
@@ -318,130 +337,18 @@
            <schema_name/>
            </partitioning>
 <join_type>FULL OUTER</join_type>
-<step1>Sort mesorregiao_microrregiao</step1>
-<step2>Sort municipio</step2>
-    <keys_1>
-      <key>CO_MICRORREGIAO</key>
-    </keys_1>
-    <keys_2>
-      <key>CO_MICRORREGIAO</key>
-    </keys_2>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1119</xloc>
-      <yloc>313</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Merge municipio_distrito</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<join_type>FULL OUTER</join_type>
-<step1>Sort microrregiao_municipio</step1>
-<step2>Sort distrito</step2>
-    <keys_1>
-      <key>CO_MUNICIPIO</key>
-    </keys_1>
-    <keys_2>
-      <key>CO_MUNICIPIO</key>
-    </keys_2>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1382</xloc>
-      <yloc>309</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Merge pais_regiao</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<join_type>FULL OUTER</join_type>
-<step1>Sort pais</step1>
-<step2>Sort regiao</step2>
+<step1>Sort municipio_uf</step1>
+<step2>Sort pais</step2>
     <keys_1>
       <key>CO_PAIS</key>
     </keys_1>
     <keys_2>
-      <key>CO_PAIS_ORIGEM</key>
+      <key>CO_PAIS</key>
     </keys_2>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>92</xloc>
-      <yloc>389</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Merge regiao_uf</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<join_type>FULL OUTER</join_type>
-<step1>Sort pais_regiao</step1>
-<step2>Sort uf</step2>
-    <keys_1>
-      <key>CO_REGIAO</key>
-    </keys_1>
-    <keys_2>
-      <key>CO_REG</key>
-    </keys_2>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>381</xloc>
-      <yloc>309</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Merge uf_mesorregiao</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<join_type>FULL OUTER</join_type>
-<step1>Sort regiao_uf</step1>
-<step2>Sort mesorregiao</step2>
-    <keys_1>
-      <key>CO_UF</key>
-    </keys_1>
-    <keys_2>
-      <key>CO_UF</key>
-    </keys_2>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>641</xloc>
-      <yloc>313</yloc>
+      <xloc>548</xloc>
+      <yloc>261</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -457,19 +364,11 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>      <field>        <name>CO_PAIS</name>
-        <rename/>
+    <fields>      <field>        <name>CO_PAIS_1</name>
+        <rename>CO_PAIS</rename>
         <length>-2</length>
         <precision>-2</precision>
       </field>      <field>        <name>NM_PAIS</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>CO_REGIAO</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>NM_REGIAO</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
@@ -481,22 +380,6 @@
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>CO_MESORREGIAO</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>NM_MESORREGIAO</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>CO_MICRORREGIAO</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>NM_MICRORREGIAO</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
       </field>      <field>        <name>CO_MUNICIPIO</name>
         <rename/>
         <length>-2</length>
@@ -505,25 +388,17 @@
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>CO_DISTRITO</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>NM_DISTRITO</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
     </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1411</xloc>
-      <yloc>179</yloc>
+      <xloc>888</xloc>
+      <yloc>316</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Sort distrito</name>
+    <name>Sort cartesian</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -542,7 +417,7 @@
       <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>CO_MUNICIPIO</name>
+        <name>CO_PAIS</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <presorted>N</presorted>
@@ -550,144 +425,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1254</xloc>
-      <yloc>239</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Sort mesorregiao</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>CO_UF</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>502</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Sort mesorregiao_microrregiao</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>CO_MICRORREGIAO</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1009</xloc>
-      <yloc>383</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Sort microrregiao</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>CO_MESORREGIAO</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>762</xloc>
-      <yloc>254</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Sort microrregiao_municipio</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>CO_MUNICIPIO</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1259</xloc>
-      <yloc>381</yloc>
+      <xloc>743</xloc>
+      <yloc>395</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -712,7 +451,7 @@
       <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>CO_MICRORREGIAO</name>
+        <name>CO_MUNICIPIO</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <presorted>N</presorted>
@@ -720,14 +459,82 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1004</xloc>
-      <yloc>247</yloc>
+      <xloc>48</xloc>
+      <yloc>259</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort municipio_uf</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>CO_PAIS</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>340</xloc>
+      <yloc>395</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
     <name>Sort pais</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>CO_PAIS</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>334</xloc>
+      <yloc>260</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort pais_uf</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -754,14 +561,14 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>25</xloc>
-      <yloc>243</yloc>
+      <xloc>741</xloc>
+      <yloc>261</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Sort pais_regiao</name>
+    <name>Sort rows</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -780,7 +587,7 @@
       <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>CO_REGIAO</name>
+        <name>CO_PAIS</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <presorted>N</presorted>
@@ -788,76 +595,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>259</xloc>
-      <yloc>389</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Sort regiao</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>CO_PAIS_ORIGEM</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>155</xloc>
-      <yloc>242</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Sort regiao_uf</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>CO_REGIAO</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>503</xloc>
-      <yloc>389</yloc>
+      <xloc>1069</xloc>
+      <yloc>310</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -882,7 +621,7 @@
       <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>CO_REG</name>
+        <name>CO_UF</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <presorted>N</presorted>
@@ -890,42 +629,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>254</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Sort uf_mesorregiao</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>CO_MESORREGIAO</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>769</xloc>
-      <yloc>386</yloc>
+      <xloc>193</xloc>
+      <yloc>267</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -943,9 +648,9 @@
            </partitioning>
     <connection>dw</connection>
     <schema/>
-    <table>D_LOCALIDADE</table>
+    <table>D_LOCALIDADE_MUNICIPIO</table>
     <commit>1000</commit>
-    <truncate>N</truncate>
+    <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
     <specify_fields>Y</specify_fields>
@@ -960,44 +665,12 @@
     <return_field/>
     <fields>
         <field>
-          <column_name>CO_PAIS_ORIGEM</column_name>
-          <stream_name>CO_PAIS</stream_name>
-        </field>
-        <field>
-          <column_name>NM_PAIS_ORIGEM</column_name>
-          <stream_name>NM_PAIS</stream_name>
-        </field>
-        <field>
-          <column_name>CO_REGIAO</column_name>
-          <stream_name>CO_REGIAO</stream_name>
-        </field>
-        <field>
-          <column_name>NM_REGIAO</column_name>
-          <stream_name>NM_REGIAO</stream_name>
-        </field>
-        <field>
           <column_name>CO_UF</column_name>
           <stream_name>CO_UF</stream_name>
         </field>
         <field>
           <column_name>NM_UF</column_name>
           <stream_name>NM_UF</stream_name>
-        </field>
-        <field>
-          <column_name>CO_MESORREGIAO</column_name>
-          <stream_name>CO_MESORREGIAO</stream_name>
-        </field>
-        <field>
-          <column_name>NM_MESORREGIAO</column_name>
-          <stream_name>NM_MESORREGIAO</stream_name>
-        </field>
-        <field>
-          <column_name>CO_MICRORREGIAO</column_name>
-          <stream_name>CO_MICRORREGIAO</stream_name>
-        </field>
-        <field>
-          <column_name>NM_MICRORREGIAO</column_name>
-          <stream_name>NM_MICRORREGIAO</stream_name>
         </field>
         <field>
           <column_name>CO_MUNICIPIO</column_name>
@@ -1008,96 +681,18 @@
           <stream_name>NM_MUNICIPIO</stream_name>
         </field>
         <field>
-          <column_name>CO_DISTRITO</column_name>
-          <stream_name>CO_DISTRITO</stream_name>
+          <column_name>CO_PAIS_ORIGEM</column_name>
+          <stream_name>CO_PAIS</stream_name>
         </field>
         <field>
-          <column_name>NM_DISTRITO</column_name>
-          <stream_name>NM_DISTRITO</stream_name>
+          <column_name>NM_PAIS_ORIGEM</column_name>
+          <stream_name>NM_PAIS</stream_name>
         </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1502</xloc>
-      <yloc>113</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>distrito</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa;  id AS CO_DISTRITO&#xd;&#xa;, id_municipio AS CO_MUNICIPIO&#xd;&#xa;, nome AS NM_DISTRITO&#xd;&#xa;FROM tb_distritos&#xd;&#xa;</sql>
-    <limit/>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1250</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>mesorregiao</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa;  id AS CO_MESORREGIAO&#xd;&#xa;, id_estado AS CO_UF&#xd;&#xa;, nome AS NM_MESORREGIAO&#xd;&#xa;FROM tb_mesorregiao&#xd;&#xa;</sql>
-    <limit/>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>502</xloc>
-      <yloc>121</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>microrregiao</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa;  id AS CO_MICRORREGIAO&#xd;&#xa;, id_mesorregiao AS CO_MESORREGIAO&#xd;&#xa;, nome AS NM_MICRORREGIAO&#xd;&#xa;FROM tb_microrregiao&#xd;&#xa;</sql>
-    <limit/>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>761</xloc>
-      <yloc>125</yloc>
+      <xloc>1212</xloc>
+      <yloc>150</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1114,7 +709,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa;  id AS CO_MUNICIPIO&#xd;&#xa;, id_microrregiao AS CO_MICRORREGIAO&#xd;&#xa;, nome AS NM_MUNICIPIO&#xd;&#xa;FROM tb_municipios&#xd;&#xa;</sql>
+    <sql>SELECT&#xd;&#xa;  id AS CO_MUNICIPIO&#xd;&#xa;, nome AS NM_MUNICIPIO&#xd;&#xa;, id_estado AS CO_UF&#xd;&#xa;FROM tb_municipios&#xd;&#xa;</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1122,8 +717,8 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1004</xloc>
-      <yloc>116</yloc>
+      <xloc>48</xloc>
+      <yloc>91</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1140,7 +735,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa;    TRIM&#x28;STR&#x28;CO_PAIS&#x29;&#x29; AS CO_PAIS&#xd;&#xa;, SIGLA_PAIS&#xd;&#xa;, NM_PAIS&#xd;&#xa;FROM tb_base_paises&#xd;&#xa;</sql>
+    <sql>SELECT&#xd;&#xa;    TRIM&#x28;STR&#x28;CO_PAIS&#x29;&#x29; AS CO_PAIS&#xd;&#xa;, NM_PAIS&#xd;&#xa;FROM tb_base_paises&#xd;&#xa;</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1148,69 +743,8 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>24</xloc>
-      <yloc>121</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>regiao</name>
-    <type>DataGrid</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <name>CO_REGIAO</name>
-        <type/>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>NM_REGIAO</name>
-        <type/>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>CO_PAIS_ORIGEM</name>
-        <type/>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <data>
-      <line> <item>1</item><item>Norte</item><item>76</item> </line>
-      <line> <item>2</item><item>Nordeste</item><item>76</item> </line>
-      <line> <item>3</item><item>Sudeste</item><item>76</item> </line>
-      <line> <item>4</item><item>Sul</item><item>76</item> </line>
-      <line> <item>5</item><item>Centro-Oeste</item><item>76</item> </line>
-    </data>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>155</xloc>
-      <yloc>123</yloc>
+      <xloc>334</xloc>
+      <yloc>85</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1227,7 +761,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa;  LEFT&#x28;id, 1&#x29; AS CO_REG	&#xd;&#xa;, id AS CO_UF&#xd;&#xa;, nome AS NM_UF&#xd;&#xa;FROM tb_estados&#xd;&#xa;</sql>
+    <sql>SELECT&#xd;&#xa; id AS CO_UF&#xd;&#xa;, nome AS NM_UF&#xd;&#xa;FROM tb_estados&#xd;&#xa;</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1235,8 +769,8 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>254</xloc>
-      <yloc>122</yloc>
+      <xloc>193</xloc>
+      <yloc>89</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

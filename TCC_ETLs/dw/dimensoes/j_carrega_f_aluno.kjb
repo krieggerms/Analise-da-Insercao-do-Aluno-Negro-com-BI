@@ -82,8 +82,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>333</xloc>
-      <yloc>343</yloc>
+      <xloc>202</xloc>
+      <yloc>349</yloc>
       </entry>
     <entry>
       <name>ano</name>
@@ -115,8 +115,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>459</xloc>
-      <yloc>195</yloc>
+      <xloc>328</xloc>
+      <yloc>201</yloc>
       </entry>
     <entry>
       <name>escola</name>
@@ -148,8 +148,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>690</xloc>
-      <yloc>192</yloc>
+      <xloc>677</xloc>
+      <yloc>333</yloc>
       </entry>
     <entry>
       <name>aluno</name>
@@ -181,8 +181,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>821</xloc>
-      <yloc>328</yloc>
+      <xloc>800</xloc>
+      <yloc>200</yloc>
       </entry>
     <entry>
       <name>Success</name>
@@ -191,16 +191,16 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>919</xloc>
-      <yloc>190</yloc>
+      <xloc>923</xloc>
+      <yloc>334</yloc>
       </entry>
     <entry>
-      <name>localidade</name>
+      <name>localidade_municipio</name>
       <description/>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;t_d_localidade.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;t_d_localidade_municipio.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -224,8 +224,41 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>573</xloc>
-      <yloc>335</yloc>
+      <xloc>547</xloc>
+      <yloc>197</yloc>
+      </entry>
+    <entry>
+      <name>localidade_distrito</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;t_d_localidade_distrito.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>441</xloc>
+      <yloc>338</yloc>
       </entry>
   </entries>
   <hops>
@@ -257,8 +290,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ano</from>
-      <to>localidade</to>
+      <from>localidade_municipio</from>
+      <to>escola</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -266,8 +299,17 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>localidade</from>
-      <to>escola</to>
+      <from>ano</from>
+      <to>localidade_distrito</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>localidade_distrito</from>
+      <to>localidade_municipio</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
