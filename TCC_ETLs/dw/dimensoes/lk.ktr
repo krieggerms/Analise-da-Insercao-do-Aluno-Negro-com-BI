@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>t_f_aluno</name>
+    <name>lk</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
     </parameters>
@@ -67,9 +66,9 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2019&#x2f;09&#x2f;23 21&#x3a;46&#x3a;43.064</created_date>
+  <created_date>2019&#x2f;11&#x2f;08 00&#x3a;56&#x3a;15.606</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2019&#x2f;09&#x2f;23 21&#x3a;46&#x3a;43.064</modified_date>
+  <modified_date>2019&#x2f;11&#x2f;08 00&#x3a;56&#x3a;15.606</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -106,127 +105,21 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Table input brasileiros</from><to>If field value is null</to><enabled>N</enabled> </hop>
-  <hop> <from>Table input estrangeiros</from><to>If field value is null 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>If field value is null</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>N</enabled> </hop>
-  <hop> <from>If field value is null 2</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
-  <hop> <from>Dummy &#x28;do nothing&#x29;</from><to>Replace in string</to><enabled>Y</enabled> </hop>
-  <hop> <from>Replace in string</from><to>Database lookup</to><enabled>Y</enabled> </hop>
-  <hop> <from>Database lookup</from><to>Database lookup 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>Database lookup 2</from><to>Select values</to><enabled>Y</enabled> </hop>
   <hop> <from>Select values</from><to>Sort rows</to><enabled>Y</enabled> </hop>
   <hop> <from>Sort rows</from><to>Table output</to><enabled>Y</enabled> </hop>
-  <hop> <from>Table input naturalizados</from><to>If field value is null 3</to><enabled>N</enabled> </hop>
-  <hop> <from>If field value is null 3</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>N</enabled> </hop>
+  <hop> <from>Dummy &#x28;do nothing&#x29;</from><to>Replace in string</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null 2</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null 3</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Table input brasileiros</from><to>If field value is null</to><enabled>Y</enabled> </hop>
+  <hop> <from>Table input estrangeiros</from><to>If field value is null 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Table input naturalizados</from><to>If field value is null 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Replace in string</from><to>Stream lookup</to><enabled>Y</enabled> </hop>
+  <hop> <from>Table input</from><to>Stream lookup</to><enabled>Y</enabled> </hop>
+  <hop> <from>Stream lookup</from><to>Stream lookup 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Table input</from><to>Stream lookup 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Stream lookup 2</from><to>Select values</to><enabled>Y</enabled> </hop>
   </order>
-  <step>
-    <name>Database lookup</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>dw</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>dbo</schema>
-      <table>D_LOCALIDADE_MUNICIPIO</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>CO_MUNICIPIO_NASC</name>
-        <field>CO_MUNICIPIO</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>CO_UF_NASC</name>
-        <field>CO_UF</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>CO_PAIS_ORIGEM</name>
-        <field>CO_PAIS_ORIGEM</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>ID_LOCALIDADE_MUNICIPIO</name>
-        <rename>FK_CO_NASC</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>778</xloc>
-      <yloc>216</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Database lookup 2</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>dw</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>dbo</schema>
-      <table>D_LOCALIDADE_MUNICIPIO</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>CO_MUNICIPIO_END</name>
-        <field>CO_MUNICIPIO</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>CO_UF_END</name>
-        <field>CO_UF</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>CO_PAIS_ORIGEM</name>
-        <field>CO_PAIS_ORIGEM</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>ID_LOCALIDADE_MUNICIPIO</name>
-        <rename>FK_CO_END</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>933</xloc>
-      <yloc>216</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
   <step>
     <name>Dummy &#x28;do nothing&#x29;</name>
     <type>Dummy</type>
@@ -240,8 +133,8 @@
            </partitioning>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>630</xloc>
-      <yloc>309</yloc>
+      <xloc>430</xloc>
+      <yloc>260</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -364,8 +257,8 @@
       </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>461</xloc>
-      <yloc>160</yloc>
+      <xloc>261</xloc>
+      <yloc>111</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -488,8 +381,8 @@
       </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>468</xloc>
-      <yloc>449</yloc>
+      <xloc>268</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -612,8 +505,8 @@
       </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>467</xloc>
-      <yloc>309</yloc>
+      <xloc>267</xloc>
+      <yloc>260</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -875,8 +768,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>719</xloc>
-      <yloc>440</yloc>
+      <xloc>590</xloc>
+      <yloc>377</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -947,8 +840,8 @@
       </field>        <select_unspecified>N</select_unspecified>
     </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1017</xloc>
-      <yloc>437</yloc>
+      <xloc>1187</xloc>
+      <yloc>215</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -981,8 +874,122 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1137</xloc>
-      <yloc>293</yloc>
+      <xloc>1373</xloc>
+      <yloc>20</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Stream lookup</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <from>Table input</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>CO_UF_NASC</name>
+        <field>CO_UF</field>
+      </key>
+      <key>
+        <name>CO_MUNICIPIO_NASC</name>
+        <field>CO_MUNICIPIO</field>
+      </key>
+      <key>
+        <name>CO_PAIS_ORIGEM</name>
+        <field>CO_PAIS_ORIGEM</field>
+      </key>
+      <value>
+        <name>ID_LOCALIDADE_MUNICIPIO</name>
+        <rename>FK_CO_NASC</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>769</xloc>
+      <yloc>216</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Stream lookup 2</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <from>Table input</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>CO_UF_END</name>
+        <field>CO_UF</field>
+      </key>
+      <key>
+        <name>CO_MUNICIPIO_END</name>
+        <field>CO_MUNICIPIO</field>
+      </key>
+      <key>
+        <name>CO_PAIS_ORIGEM</name>
+        <field>CO_PAIS_ORIGEM</field>
+      </key>
+      <value>
+        <name>ID_LOCALIDADE_MUNICIPIO</name>
+        <rename>FK_CO_END</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>945</xloc>
+      <yloc>215</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Table input</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw</connection>
+    <sql>SELECT&#xd;&#xa;  CO_MUNICIPIO&#xd;&#xa;, CO_UF&#xd;&#xa;, CO_PAIS_ORIGEM&#xd;&#xa;, ID_LOCALIDADE_MUNICIPIO&#xd;&#xa;FROM D_LOCALIDADE_MUNICIPIO&#xd;&#xa;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>862</xloc>
+      <yloc>323</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -999,7 +1006,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa; ID_ALUNO,&#xd;&#xa; IN_NECESSIDADE_ESPECIAL,&#xd;&#xa; NU_IDADE_REFERENCIA,&#xd;&#xa; TP_MEDIACAO_DIDATICO_PEDAGO,&#xd;&#xa; TP_SEXO,&#xd;&#xa; TP_ETAPA_ENSINO,&#xd;&#xa; TP_NACIONALIDADE,&#xd;&#xa; TP_COR_RACA,&#xd;&#xa; NU_ANO_CENSO,&#xd;&#xa; CO_ENTIDADE,&#xd;&#xa; TP_ZONA_RESIDENCIAL,&#xd;&#xa; CO_UF_NASC,&#xd;&#xa; CO_MUNICIPIO_NASC,&#xd;&#xa; CO_UF_END,&#xd;&#xa; CO_MUNICIPIO_END,&#xd;&#xa; CO_PAIS_ORIGEM&#xd;&#xa;FROM tb_matricula&#xd;&#xa;WHERE TP_NACIONALIDADE &#x3d; &#x27;1&#x27; AND NU_ANO_CENSO &#x3d; &#x27;2015&#x27;&#xd;&#xa;</sql>
+    <sql>SELECT&#xd;&#xa; ID_ALUNO,&#xd;&#xa; IN_NECESSIDADE_ESPECIAL,&#xd;&#xa; NU_IDADE_REFERENCIA,&#xd;&#xa; TP_MEDIACAO_DIDATICO_PEDAGO,&#xd;&#xa; TP_SEXO,&#xd;&#xa; TP_ETAPA_ENSINO,&#xd;&#xa; TP_NACIONALIDADE,&#xd;&#xa; TP_COR_RACA,&#xd;&#xa; NU_ANO_CENSO,&#xd;&#xa; CO_ENTIDADE,&#xd;&#xa; TP_ZONA_RESIDENCIAL,&#xd;&#xa; CO_UF_NASC,&#xd;&#xa; CO_MUNICIPIO_NASC,&#xd;&#xa; CO_UF_END,&#xd;&#xa; CO_MUNICIPIO_END,&#xd;&#xa; CO_PAIS_ORIGEM&#xd;&#xa;FROM tb_matricula&#xd;&#xa;WHERE TP_NACIONALIDADE &#x3d; &#x27;1&#x27; AND NU_ANO_CENSO &#x3d; &#x27;2018&#x27;&#xd;&#xa;</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1007,8 +1014,8 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>280</xloc>
-      <yloc>160</yloc>
+      <xloc>80</xloc>
+      <yloc>111</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1025,7 +1032,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa; ID_ALUNO,&#xd;&#xa; IN_NECESSIDADE_ESPECIAL,&#xd;&#xa; NU_IDADE_REFERENCIA,&#xd;&#xa; TP_MEDIACAO_DIDATICO_PEDAGO,&#xd;&#xa; TP_SEXO,&#xd;&#xa; TP_ETAPA_ENSINO,&#xd;&#xa; TP_NACIONALIDADE,&#xd;&#xa; TP_COR_RACA,&#xd;&#xa; NU_ANO_CENSO,&#xd;&#xa; CO_ENTIDADE,&#xd;&#xa; TP_ZONA_RESIDENCIAL,&#xd;&#xa; CO_UF_NASC,&#xd;&#xa; CO_MUNICIPIO_NASC,&#xd;&#xa; CO_UF_END,&#xd;&#xa; CO_MUNICIPIO_END,&#xd;&#xa; CO_PAIS_ORIGEM&#xd;&#xa;FROM tb_matricula&#xd;&#xa;WHERE TP_NACIONALIDADE &#x3d; &#x27;3&#x27; AND NU_ANO_CENSO &#x3d; &#x27;2015&#x27;</sql>
+    <sql>SELECT&#xd;&#xa; ID_ALUNO,&#xd;&#xa; IN_NECESSIDADE_ESPECIAL,&#xd;&#xa; NU_IDADE_REFERENCIA,&#xd;&#xa; TP_MEDIACAO_DIDATICO_PEDAGO,&#xd;&#xa; TP_SEXO,&#xd;&#xa; TP_ETAPA_ENSINO,&#xd;&#xa; TP_NACIONALIDADE,&#xd;&#xa; TP_COR_RACA,&#xd;&#xa; NU_ANO_CENSO,&#xd;&#xa; CO_ENTIDADE,&#xd;&#xa; TP_ZONA_RESIDENCIAL,&#xd;&#xa; CO_UF_NASC,&#xd;&#xa; CO_MUNICIPIO_NASC,&#xd;&#xa; CO_UF_END,&#xd;&#xa; CO_MUNICIPIO_END,&#xd;&#xa; CO_PAIS_ORIGEM&#xd;&#xa;FROM tb_matricula&#xd;&#xa;WHERE TP_NACIONALIDADE &#x3d; &#x27;3&#x27; AND NU_ANO_CENSO &#x3d; &#x27;2018&#x27;</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1033,8 +1040,8 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>289</xloc>
-      <yloc>449</yloc>
+      <xloc>89</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1051,7 +1058,7 @@
            <schema_name/>
            </partitioning>
     <connection>staging</connection>
-    <sql>SELECT&#xd;&#xa; ID_ALUNO,&#xd;&#xa; IN_NECESSIDADE_ESPECIAL,&#xd;&#xa; NU_IDADE_REFERENCIA,&#xd;&#xa; TP_MEDIACAO_DIDATICO_PEDAGO,&#xd;&#xa; TP_SEXO,&#xd;&#xa; TP_ETAPA_ENSINO,&#xd;&#xa; TP_NACIONALIDADE,&#xd;&#xa; TP_COR_RACA,&#xd;&#xa; NU_ANO_CENSO,&#xd;&#xa; CO_ENTIDADE,&#xd;&#xa; TP_ZONA_RESIDENCIAL,&#xd;&#xa; CO_UF_NASC,&#xd;&#xa; CO_MUNICIPIO_NASC,&#xd;&#xa; CO_UF_END,&#xd;&#xa; CO_MUNICIPIO_END,&#xd;&#xa; CO_PAIS_ORIGEM&#xd;&#xa;FROM tb_matricula&#xd;&#xa;WHERE TP_NACIONALIDADE &#x3d; &#x27;2&#x27; AND NU_ANO_CENSO &#x3d; &#x27;2015&#x27;&#xd;&#xa;</sql>
+    <sql>SELECT&#xd;&#xa; ID_ALUNO,&#xd;&#xa; IN_NECESSIDADE_ESPECIAL,&#xd;&#xa; NU_IDADE_REFERENCIA,&#xd;&#xa; TP_MEDIACAO_DIDATICO_PEDAGO,&#xd;&#xa; TP_SEXO,&#xd;&#xa; TP_ETAPA_ENSINO,&#xd;&#xa; TP_NACIONALIDADE,&#xd;&#xa; TP_COR_RACA,&#xd;&#xa; NU_ANO_CENSO,&#xd;&#xa; CO_ENTIDADE,&#xd;&#xa; TP_ZONA_RESIDENCIAL,&#xd;&#xa; CO_UF_NASC,&#xd;&#xa; CO_MUNICIPIO_NASC,&#xd;&#xa; CO_UF_END,&#xd;&#xa; CO_MUNICIPIO_END,&#xd;&#xa; CO_PAIS_ORIGEM&#xd;&#xa;FROM tb_matricula&#xd;&#xa;WHERE TP_NACIONALIDADE &#x3d; &#x27;2&#x27; AND NU_ANO_CENSO &#x3d; &#x27;2018&#x27;&#xd;&#xa;</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1059,8 +1066,8 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>286</xloc>
-      <yloc>309</yloc>
+      <xloc>86</xloc>
+      <yloc>260</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1079,7 +1086,7 @@
     <connection>dw</connection>
     <schema/>
     <table>F_ALUNO</table>
-    <commit>1000</commit>
+    <commit>100000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
@@ -1149,8 +1156,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1252</xloc>
-      <yloc>292</yloc>
+      <xloc>1522</xloc>
+      <yloc>20</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

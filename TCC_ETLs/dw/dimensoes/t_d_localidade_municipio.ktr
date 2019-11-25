@@ -151,7 +151,7 @@
       </field>
       <field>
         <name>NM_PAIS</name>
-        <type/>
+        <type>String</type>
         <format/>
         <currency/>
         <decimal/>
@@ -183,7 +183,7 @@
            </partitioning>
     <connection>dw</connection>
     <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
+    <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
     <sql>INSERT INTO D_LOCALIDADE_MUNICIPIO &#x28;CO_MUNICIPIO, NM_MUNICIPIO, CO_UF, NM_UF, CO_PAIS_ORIGEM, NM_PAIS_ORIGEM&#x29; &#xd;&#xa;VALUES  &#xd;&#xa;&#x28;&#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;, &#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;, &#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;&#x29;,  &#xd;&#xa;&#x28;&#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;, &#x27;-1&#x27;, &#x27;INFORMACAO NULA&#x27;, &#x27;76&#x27;, &#x27;BRASIL&#x27;&#x29;,&#xd;&#xa;&#x28;&#x27;-3&#x27;, &#x27;NATURALIZADO&#x2f;NASCIDO NO EXTERIOR&#x27;, &#x27;-3&#x27;, &#x27;NATURALIZADO&#x2f;NASCIDO NO EXTERIOR&#x27;, &#x27;76&#x27;, &#x27;BRASIL&#x27;&#x29;</sql>
@@ -196,8 +196,8 @@
     </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>985</xloc>
-      <yloc>383</yloc>
+      <xloc>1016</xloc>
+      <yloc>395</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -368,8 +368,8 @@
         <rename>CO_PAIS</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>NM_PAIS</name>
-        <rename/>
+      </field>      <field>        <name>NM_PAIS_1</name>
+        <rename>NM_PAIS</rename>
         <length>-2</length>
         <precision>-2</precision>
       </field>      <field>        <name>CO_UF</name>
