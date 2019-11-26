@@ -106,9 +106,9 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Table input brasileiros</from><to>If field value is null</to><enabled>N</enabled> </hop>
+  <hop> <from>Table input brasileiros</from><to>If field value is null</to><enabled>Y</enabled> </hop>
   <hop> <from>Table input estrangeiros</from><to>If field value is null 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>If field value is null</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>N</enabled> </hop>
+  <hop> <from>If field value is null</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
   <hop> <from>If field value is null 2</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
   <hop> <from>Dummy &#x28;do nothing&#x29;</from><to>Replace in string</to><enabled>Y</enabled> </hop>
   <hop> <from>Replace in string</from><to>Database lookup</to><enabled>Y</enabled> </hop>
@@ -116,8 +116,8 @@
   <hop> <from>Database lookup 2</from><to>Select values</to><enabled>Y</enabled> </hop>
   <hop> <from>Select values</from><to>Sort rows</to><enabled>Y</enabled> </hop>
   <hop> <from>Sort rows</from><to>Table output</to><enabled>Y</enabled> </hop>
-  <hop> <from>Table input naturalizados</from><to>If field value is null 3</to><enabled>N</enabled> </hop>
-  <hop> <from>If field value is null 3</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>N</enabled> </hop>
+  <hop> <from>Table input naturalizados</from><to>If field value is null 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null 3</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Database lookup</name>
@@ -167,8 +167,8 @@
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>778</xloc>
-      <yloc>216</yloc>
+      <xloc>780</xloc>
+      <yloc>200</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -221,8 +221,8 @@
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>933</xloc>
-      <yloc>216</yloc>
+      <xloc>940</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -240,8 +240,8 @@
            </partitioning>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>630</xloc>
-      <yloc>309</yloc>
+      <xloc>620</xloc>
+      <yloc>300</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -364,7 +364,7 @@
       </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>461</xloc>
+      <xloc>460</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
       </GUI>
@@ -488,8 +488,8 @@
       </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>468</xloc>
-      <yloc>449</yloc>
+      <xloc>460</xloc>
+      <yloc>420</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -612,8 +612,8 @@
       </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>467</xloc>
-      <yloc>309</yloc>
+      <xloc>460</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -875,8 +875,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>719</xloc>
-      <yloc>440</yloc>
+      <xloc>720</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -947,8 +947,8 @@
       </field>        <select_unspecified>N</select_unspecified>
     </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1017</xloc>
-      <yloc>437</yloc>
+      <xloc>1020</xloc>
+      <yloc>380</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -981,8 +981,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1137</xloc>
-      <yloc>293</yloc>
+      <xloc>1140</xloc>
+      <yloc>280</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1008,7 +1008,7 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>280</xloc>
-      <yloc>160</yloc>
+      <yloc>180</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1033,8 +1033,8 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>289</xloc>
-      <yloc>449</yloc>
+      <xloc>280</xloc>
+      <yloc>440</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1059,8 +1059,8 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>286</xloc>
-      <yloc>309</yloc>
+      <xloc>280</xloc>
+      <yloc>360</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1149,8 +1149,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1252</xloc>
-      <yloc>292</yloc>
+      <xloc>1260</xloc>
+      <yloc>260</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
